@@ -1,0 +1,2190 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gaming Hub</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="shortcut icon" href="../img/ico.png" type="image/x-icon" alt="logo strony Gaming Hub" />
+  </head>
+  <body>
+    <div class="video-container">
+      <video autoplay loop muted>
+        <source src="../video/w2.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <header>
+      <h1>Gaming Hub</h1>
+    </header>
+    <nav>
+      <a href="#gry">Gry</a>
+      <a href="#aktualnosci">Aktualności</a>
+      <a href="#inne">Sklepy/inne</a>
+    </nav>
+    <main id="container">
+      <aside class="filtr">
+        <div class="panel">
+          <div class="wyszukiwanie">
+            <div class="panelwyszukiwania">
+              <img class="lupa" src="../img/lupa.png" alt="wyszukiwanie gry" />
+              <input type="search" name="" id="search" autocomplete="off" placeholder="Wyszukaj" />
+            </div>
+            <div class="trojkat"></div>
+          </div>
+          <div class="filtry">
+            <button class="buttonsort" id="usunfiltry">
+              Usun wszystkie filtry
+              <b>X</b>
+            </button>
+            <button class="buttonsort" id="usunulubione">
+              Usun ulubione
+              <b>X</b>
+            </button>
+            <button class="buttonsort" id="usunalfabetyczne">
+              Usun sort. alfabetyczne
+              <b>X</b>
+            </button>
+          </div>
+          <div class="filtrowanie">
+            <div class="Alfabetycznie sort">
+              <div class="p-img">
+                <p class="sortowanie-alfabetycznie text-sorting">Sortuj Alfabetycznie</p>
+                <div class="trojkat"></div>
+              </div>
+              <div class="az">
+                <input type="radio" id="az" name="opcje" value="opcja1" />
+                <label for="A-Z">Sortuj od A do Z</label>
+              </div>
+              <div class="za">
+                <input type="radio" id="za" name="opcje" value="opcja2" />
+                <label for="Z-A">Sortuj od Z do A</label>
+              </div>
+            </div>
+            <div class="sortowanie" id="sortowanieGry">
+              <div class="TrybGry sort">
+                <div class="p-img">
+                  <p class="sortowanie-urzadzenie text-sorting">Tryb Gry</p>
+                  <div class="trojkat"></div>
+                </div>
+                <div class="single">
+                  <input type="checkbox" name="" id="single" />
+                  <label for="single">Single-Player</label>
+                </div>
+                <div class="multi">
+                  <input type="checkbox" name="" id="multi" />
+                  <label for="multi">Multi-Player</label>
+                </div>
+              </div>
+              <div class="Gatunek sort">
+                <div class="p-img">
+                  <p class="sortowanie-urzadzenie text-sorting">Gatunek Gry</p>
+                  <div class="trojkat"></div>
+                </div>
+                <div class="FPS">
+                  <input type="checkbox" name="" id="FPS" />
+                  <label for="FPS" title="First-Person Shooter">FPS</label>
+                </div>
+                <div class="moba">
+                  <input type="checkbox" name="" id="moba" />
+                  <label for="moba" title="Multiplayer Online Battle Arena">MOBA</label>
+                </div>
+                <div class="MMORPG">
+                  <input type="checkbox" name="" id="MMORPG" />
+                  <label for="MMORPG" title="Massively Multiplayer Online Role-Playing Game">MMORPG</label>
+                </div>
+                <div class="Survival">
+                  <input type="checkbox" name="" id="Survival" />
+                  <label for="Survival">Survival</label>
+                </div>
+                <div class="Sandbox">
+                  <input type="checkbox" name="" id="Sandbox" />
+                  <label for="Sandbox">Sandbox</label>
+                </div>
+                <div class="BattleRoyale">
+                  <input type="checkbox" name="" id="BattleRoyale" />
+                  <label for="BattleRoyale">Battle Royale</label>
+                </div>
+                <div class="RPG">
+                  <input type="checkbox" name="" id="rpg" />
+                  <label for="RPG" title="Role-Playing Game">RPG</label>
+                </div>
+                <div class="Sportowe">
+                  <input type="checkbox" name="" id="Sportowe" />
+                  <label for="Sportowe">Sportowe</label>
+                </div>
+                <div class="Simulation">
+                  <input type="checkbox" name="" id="Simulation" />
+                  <label for="Simulation">Simulation</label>
+                </div>
+                <div class="Wyscigi">
+                  <input type="checkbox" name="" id="Racing" />
+                  <label for="Racing">Wyścigowe</label>
+                </div>
+                <div class="strategiczne">
+                  <input type="checkbox" name="" id="Strategy" />
+                  <label for="Strategy">strategiczne</label>
+                </div>
+              </div>
+              <div class="Urzadzenie sort">
+                <div class="p-img">
+                  <p class="sortowanie-urzadzenie text-sorting">Urządzenie</p>
+                  <div class="trojkat"></div>
+                </div>
+                <div class="pc">
+                  <input type="checkbox" name="" id="pc" />
+                  <label for="PC">PC</label>
+                </div>
+                <div class="ps">
+                  <input type="checkbox" name="" id="ps" />
+                  <label for="ps">PlayStation</label>
+                </div>
+                <div class="xbox">
+                  <input type="checkbox" name="" id="xbox" />
+                  <label for="xbox">Xbox</label>
+                </div>
+                <div class="swtich">
+                  <input type="checkbox" name="" id="switch" />
+                  <label for="switch">Nintendo Switch</label>
+                </div>
+                <div class="mobile">
+                  <input type="checkbox" name="" id="mobilne" />
+                  <label for="mobilne">mobilne</label>
+                </div>
+              </div>
+              <div class="Wydawca sort">
+                <div class="p-img">
+                  <p class="sortowanie-platforma text-sorting">Wydawca Gry</p>
+                  <div class="trojkat"></div>
+                </div>
+                <div class="Riot">
+                  <input type="checkbox" name="" id="riot" />
+                  <label for="Riot">Riot Games</label>
+                </div>
+                <div class="valve">
+                  <input type="checkbox" name="" id="valve" />
+                  <label for="valve">Valve Corporation</label>
+                </div>
+                <div class="Electronic Arts">
+                  <input type="checkbox" name="" id="ea" />
+                  <label for="ea">Electronic Arts</label>
+                </div>
+                <div class="Activision">
+                  <input type="checkbox" name="" id="Activision" />
+                  <label for="Activision">Activision</label>
+                </div>
+                <div class="Mojang Studios">
+                  <input type="checkbox" name="" id="Mojang" />
+                  <label for="Mojang">Mojang Studios</label>
+                </div>
+                <div class="Hi-Rez">
+                  <input type="checkbox" name="" id="Hi-Rez" />
+                  <label for="Hi-Rez">Hi-Rez Studios</label>
+                </div>
+                <div class="Blizzard">
+                  <input type="checkbox" name="" id="Blizzard" />
+                  <label for="Blizzard">Blizzard Entertainment</label>
+                </div>
+                <div class="Rockstar Games">
+                  <input type="checkbox" name="" id="Rockstar" />
+                  <label for="Rockstar">Rockstar Games</label>
+                </div>
+                <div class="2KSports">
+                  <input type="checkbox" name="" id="2KSports" />
+                  <label for="2KSports">2K Sports</label>
+                </div>
+                <div class="PUBGCorporation">
+                  <input type="checkbox" name="" id="PUBGCorporation" />
+                  <label for="PUBGCorporation">PUBG Corporation</label>
+                </div>
+                <div class="Psyonix">
+                  <input type="checkbox" name="" id="Psyonix" />
+                  <label for="Psyonix">Psyonix</label>
+                </div>
+                <div class="Wargaming">
+                  <input type="checkbox" name="" id="Wargaming" />
+                  <label for="Wargaming">Wargaming</label>
+                </div>
+                <div class="Maxis">
+                  <input type="checkbox" name="" id="Maxis" />
+                  <label for="Maxis">Maxis</label>
+                </div>
+                <div class="Klei Entertainment">
+                  <input type="checkbox" name="" id="Klei" />
+                  <label for="Klei">Klei Entertainment</label>
+                </div>
+                <div class="Studio Wildcard">
+                  <input type="checkbox" name="" id="Wildcard" />
+                  <label for="Wildcard">Studio Wildcard</label>
+                </div>
+                <div class="RespawnEntertainment">
+                  <input type="checkbox" name="" id="RespawnEntertainment" />
+                  <label for="RespawnEntertainment">Respawn Entertainment</label>
+                </div>
+
+                <div class="Webzen">
+                  <input type="checkbox" name="" id="Webzen" />
+                  <label for="Webzen">Webzen</label>
+                </div>
+                <div class="CDProjekt">
+                  <input type="checkbox" name="" id="CDProjekt" />
+                  <label for="CDProjekt">CD Projekt</label>
+                </div>
+              </div>
+              <div class="Platforma sort">
+                <div class="p-img">
+                  <p class="sortowanie-platforma text-sorting">Platforma</p>
+                  <div class="trojkat"></div>
+                </div>
+                <div class="steam">
+                  <input type="checkbox" name="" id="steam" />
+                  <label for="steam">Steam</label>
+                </div>
+                <div class="riotclient">
+                  <input type="checkbox" name="" id="riotclient" />
+                  <label for="riotclient">riot client</label>
+                </div>
+                <div class="origin">
+                  <input type="checkbox" name="" id="origin" />
+                  <label for="origin">Origin</label>
+                </div>
+                <div class="Epic">
+                  <input type="checkbox" name="" id="epic" />
+                  <label for="epic">Epic Games Store</label>
+                </div>
+                <div class="Uplay">
+                  <input type="checkbox" name="" id="Uplay" />
+                  <label for="Uplay">Uplay</label>
+                </div>
+                <div class="Wargaming">
+                  <input type="checkbox" name="" id="Wargaming-palt" />
+                  <label for="Wargaming">Wargaming</label>
+                </div>
+                <div class="GOG">
+                  <input type="checkbox" name="" id="GOG" />
+                  <label for="GOG">GOG Galaxy</label>
+                </div>
+                <div class="blattlenet">
+                  <input type="checkbox" name="" id="blattlenet" />
+                  <label for="blattlenet">Battle.net</label>
+                </div>
+                <div class="XboxStore">
+                  <input type="checkbox" name="" id="XboxStore" />
+                  <label for="XboxStore">Xbox Store</label>
+                </div>
+                <div class="PlayStationStore">
+                  <input type="checkbox" name="" id="PlayStationStore" />
+                  <label for="PlayStationStore">PlayStation Store</label>
+                </div>
+                <div class="GooglePlay">
+                  <input type="checkbox" name="" id="GooglePlay" />
+                  <label for="GooglePlay">Google Play Store</label>
+                </div>
+                <div class="AppStore">
+                  <input type="checkbox" name="" id="AppStore" />
+                  <label for="AppStore">App Store</label>
+                </div>
+                <div class="Nintendo eshop">
+                  <input type="checkbox" name="" id="NintendoeShop" />
+                  <label for="Nintendoeshop">Nintendo eShop</label>
+                </div>
+                <div class="Mojang Studios">
+                  <input type="checkbox" name="" id="w-Mojang" />
+                  <label for="Mojang2">Mojang Studios</label>
+                </div>
+                <div class="wyd-inne">
+                  <input type="checkbox" name="" id="w-inne" />
+                  <label for="inne">Inne</label>
+                </div>
+              </div>
+            </div>
+            <div class="sortowanie" id="sortowanieAkt">
+              <div class="TypStrony sort">
+                <div class="p-img">
+                  <p class="sortowanie-urzadzenie text-sorting">Typ Strony</p>
+                  <div class="trojkat"></div>
+                </div>
+                <div class="news">
+                  <input type="checkbox" name="" id="news" />
+                  <label for="Nowinki">Aktualności</label>
+                </div>
+                <div class="recenzje">
+                  <input type="checkbox" name="" id="recenzje" />
+                  <label for="recenzje">recenzje</label>
+                </div>
+                <div class="premiery">
+                  <input type="checkbox" name="" id="premiery" />
+                  <label for="premiery">premiery</label>
+                </div>
+                <div class="rankingi">
+                  <input type="checkbox" name="" id="rankingi" />
+                  <label for="rankingi">rankingi</label>
+                </div>
+                <div class="esport">
+                  <input type="checkbox" name="" id="esport" />
+                  <label for="esport">E-Sport</label>
+                </div>
+              </div>
+            </div>
+            <div class="sortowanie" id="sortowanieInne">
+              <div class="lokalizacja sort">
+                <div class="p-img">
+                  <p class="sortowanie-lokalizacja text-sorting">Lokalizacja</p>
+                  <div class="trojkat"></div>
+                </div>
+                <div class="Bydgoszcz">
+                  <input type="checkbox" name="" id="bdg" />
+                  <label for="Bydgoszcz">Bydgoszcz</label>
+                </div>
+                <div class="poznan">
+                  <input type="checkbox" name="" id="poznan" />
+                  <label for="poznan">Poznań</label>
+                </div>
+                <div class="Wroclaw">
+                  <input type="checkbox" name="" id="Wroclaw" />
+                  <label for="Wroclaw">Wrocław</label>
+                </div>
+                <div class="szczenin">
+                  <input type="checkbox" name="" id="szczenin" />
+                  <label for="szczenin">Szczenin</label>
+                </div>
+                <div class="torun">
+                  <input type="checkbox" name="" id="torun" />
+                  <label for="torun">Toruń</label>
+                </div>
+                <div class="Warszawa">
+                  <input type="checkbox" name="" id="Warszawa" />
+                  <label for="Warszawa">Warszawa</label>
+                </div>
+                <div class="Olsztyn">
+                  <input type="checkbox" name="" id="Olsztyn" />
+                  <label for="Olsztyn">Olsztyn</label>
+                </div>
+                <div class="Gdynia">
+                  <input type="checkbox" name="" id="Gdynia" />
+                  <label for="Gdynia">Gdynia</label>
+                </div>
+                <div class="lodz">
+                  <input type="checkbox" name="" id="lodz" />
+                  <label for="lodz">Łódź</label>
+                </div>
+                <div class="Czestochowa">
+                  <input type="checkbox" name="" id="Czestochowa" />
+                  <label for="Czestochowa">Częstochowa</label>
+                </div>
+                <div class="Radom">
+                  <input type="checkbox" name="" id="Radom" />
+                  <label for="Radom">Radom</label>
+                </div>
+                <div class="Krakow">
+                  <input type="checkbox" name="" id="Krakow" />
+                  <label for="Krakow">Kraków</label>
+                </div>
+              </div>
+              <div class="typsklepu sort">
+                <div class="p-img">
+                  <p class="sortowanie-stan text-sorting">Typ Sklepu</p>
+                  <div class="trojkat"></div>
+                </div>
+                <div class="online">
+                  <input type="checkbox" name="" id="online" />
+                  <label for="online">online</label>
+                </div>
+                <div class="stacjo">
+                  <input type="checkbox" name="" id="stacjonarne" />
+                  <label for="stacjo">stacjonarne</label>
+                </div>
+              </div>
+              <div class="stan sort">
+                <div class="p-img">
+                  <p class="sortowanie-stan text-sorting">Stan Gry</p>
+                  <div class="trojkat"></div>
+                </div>
+                <div class="nowe">
+                  <input type="checkbox" name="" id="nowe" />
+                  <label for="nowe">nowe</label>
+                </div>
+                <div class="uzywane">
+                  <input type="checkbox" name="" id="uzywane" />
+                  <label for="uzywane">używane</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="zatwierdzanie">
+            <button id="confirm" type="submit">Zastosuj filtry</button>
+          </div>
+        </div>
+      </aside>
+      <aside class="zakladka">
+        <div class="arrow">
+          <div class="arrow1"></div>
+          <div class="arrow2"></div>
+        </div>
+        <section class="gry" id="gry">
+          <a href="#lol" class="gra" data-filtr="multi moba pc riot riotclient" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/lol.jpg" />
+            <p class="nazwa nazwa-gry">League of legends</p>
+            <img class="img-logo" src="../img/logo/lollogo.png" alt="" style="bottom: -35%" />
+          </a>
+          <a href="#lolwr" class="gra" data-filtr="multi moba mobilne riot GooglePlay AppStore" alt="league of legends wild rift">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/lolwr.jpg" alt="league of legends Wild Rift" />
+            <p class="nazwa nazwa-gry">League of legends Wild Rift</p>
+            <img class="img-logo" src="../img/logo/lolwrlogo.png" alt="" style="bottom: -45%" />
+          </a>
+          <a href="#lor" class="gra" data-filtr="multi strategy pc mobilne riot riotclient" alt="league of runterra">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/lor.jpg" alt="league of Runeterra" />
+            <p class="nazwa nazwa-gry">Legends of Runeterra</p>
+            <img class="img-logo" src="../img/logo/lorlogo.png" alt="" style="bottom: -32%" />
+          </a>
+          <a href="#tft" class="gra" data-filtr="multi strategy pc mobilne riot riotclient" alt="Teamfight Tactics">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/tft.jpg" alt="Teamfight Tactics" />
+            <p class="nazwa nazwa-gry">Teamfight Tactics</p>
+            <img class="img-logo" src="../img/logo/tftlogo.png" alt="" style="bottom: -50%" />
+          </a>
+          <a href="#smite" class="gra" data-filtr="multi moba pc ps xbox switch Hi-Rez steam" alt="smite">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/smite.jpg" alt="smite" />
+            <p class="nazwa nazwa-gry">Smite</p>
+            <img class="img-logo" src="../img/logo/smitelogo.png" alt="" style="bottom: -29%" />
+          </a>
+          <a href="#dota" class="gra" data-filtr="multi moba pc valve steam" alt="dota 2">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/dota.jpg" alt="dota" />
+            <p class="nazwa nazwa-gry">Dota 2</p>
+            <img class="img-logo" src="../img/logo/dotalogo.png" alt="" style="bottom: -20%" />
+          </a>
+          <a href="#eafc" class="gra" data-filtr="multi sports pc ps xbox switch ea origin" alt="EAFC">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/eafc.jpg" alt="EA FC" />
+            <p class="nazwa nazwa-gry">EA FC</p>
+            <img class="img-logo" src="../img/logo/eafclogo.png" alt="" style="bottom: -21%" />
+          </a>
+          <a href="#rocket" class="gra" data-filtr="multi sports pc-ps-xbox-switch Psyonix epic" alt="Rocket League">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/rocket.jpg" alt="Rocket League" />
+            <p class="nazwa nazwa-gry">Rocket League</p>
+            <img class="img-logo" src="../img/logo/rocketlogo.png" alt="" style="bottom: -33%" />
+          </a>
+          <a href="#nba" class="gra" data-filtr="single-multi sports pc-ps-xbox-switch 2KSports steam" alt="nba">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/nba.jpg" alt="nba" />
+            <p class="nazwa nazwa-gry">NBA</p>
+            <img class="img-logo" src="../img/logo/nbalogo.png" alt="" style="bottom: -22%" />
+          </a>
+          <a href="#cod" class="gra" data-filtr="single-multi FPS pc-ps-xbox-switch Activision blattlenet" alt="Call of Duty">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/cod.jpg" alt="cod" />
+            <p class="nazwa nazwa-gry">Call of Duty</p>
+            <img class="img-logo" src="../img/logo/codlogo.png" alt="" style="bottom: -20%" />
+          </a>
+          <a href="#r6" class="gra" data-filtr="multi FPS pc-ps-xbox Ubisoft Uplay" alt="Tom Clancy's Rainbow Six Siege">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/r6.jpg" alt="r6" />
+            <p class="nazwa nazwa-gry">Rainbow Six Siege</p>
+            <img class="img-logo" src="../img/logo/r6logo.png" alt="" style="bottom: -27%" />
+          </a>
+          <a href="#cs" class="gra" data-filtr="multi FPS pc valve steam" alt="Counter-Strike">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/cs2.jpg" alt="cs" />
+            <p class="nazwa nazwa-gry">Counter-Strike 2</p>
+            <img class="img-logo" src="../img/logo/cs2logo.png" alt="" style="bottom: -17%" />
+          </a>
+          <a href="#fortnite" class="gra" data-filtr="multi BattleRoyale pc ps xbox switch mobilne epic" alt="Fortnite">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/fortnite.jpg" alt="Fortnite" />
+            <p class="nazwa nazwa-gry">Fortnite</p>
+            <img class="img-logo" src="../img/logo/fortnitelogo.png" alt="" style="bottom: -30%" />
+          </a>
+          <a href="#val" class="gra" data-filtr="multi FPS pc riot riotclient" alt="valorant">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/val.jpg" alt="valorant" />
+            <p class="nazwa nazwa-gry">Valorant</p>
+            <img class="img-logo" src="../img/logo/vallogo.png" alt="" style="bottom: -14%" />
+          </a>
+          <a href="#pubg" class="gra" data-filtr="multi battle-royale pc ps xbox switch mobilne PUBGCorporation steam" alt="pubg">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/pubg.jpg" alt="pubg" />
+            <p class="nazwa nazwa-gry">PlayerUnknown's Battlegrounds</p>
+            <img class="img-logo" src="../img/logo/pubglogo.png" alt="" style="bottom: -28%" />
+          </a>
+          <a href="#apex" class="gra" data-filtr="multi battle-royale FPS pc ps xbox switch RespawnEntertainment origin" alt="Apex">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/apex.jpg" alt="Apex" />
+            <p class="nazwa nazwa-gry">Apex Legends</p>
+            <img class="img-logo" src="../img/logo/apexlogo.png" alt="" style="bottom: -50%" />
+          </a>
+          <a href="#ov" class="gra" data-filtr="multi FPS pc ps xbox switch Blizzard blattlenet" alt="Overwatch">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/ov.jpg" alt="Overwatch" />
+            <p class="nazwa nazwa-gry">Overwatch 2</p>
+            <img class="img-logo" src="../img/logo/ovlogo.png" alt="" style="bottom: -9%" />
+          </a>
+          <a href="#bf" class="gra" data-filtr="multi FPS pc ps xbox switch ea origin" alt="Battlefield">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/bf.jpg" alt="Battlefield" />
+            <p class="nazwa nazwa-gry">Battlefield</p>
+            <img class="img-logo" src="../img/logo/bflogo.png" alt="" style="bottom: -33%" />
+          </a>
+          <a href="#mc" class="gra" data-filtr="single-multi sandbox pc ps xbox switch mobilne Mojang w-Mojang" alt="Minecraft ">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/mc.jpg" alt="Minecraft " />
+            <p class="nazwa nazwa-gry">Minecraft</p>
+            <img class="img-logo" src="../img/logo/mclogo.png" alt="" style="bottom: -23%" />
+          </a>
+          <a href="#wow" class="gra" data-filtr="multi MMORPG pc mac Blizzard blattlenet" alt="World of Warcraft ">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/wow.jpg" alt="World of Warcraft " />
+            <p class="nazwa nazwa-gry">World of Warcraft</p>
+            <img class="img-logo" src="../img/logo/wowlogo.png" alt="" style="bottom: -35%" />
+          </a>
+          <a href="#wot" class="gra" data-filtr="multi strategy pc ps xbox switch Wargaming Wargaming-palt" alt="world of tanks">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/wot.jpg" alt="world of tanks" />
+            <p class="nazwa nazwa-gry">World of Tanks</p>
+            <img class="img-logo" src="../img/logo/wotlogo.png" alt="" style="bottom: -41%" />
+          </a>
+          <a href="#hs" class="gra" data-filtr="single simulation pc ps xbox Maxis origin" alt="Hearthstone">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/hs.jpg" alt="Hearthstone" />
+            <p class="nazwa nazwa-gry">Hearthstone</p>
+            <img class="img-logo" src="../img/logo/hslogo.png" alt="" style="bottom: -26%" />
+          </a>
+          <a href="#thesims" class="gra" data-filtr="single simulation pc ps xbox Maxis origin" alt="thesims">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/thesims.jpg" alt="thesims" />
+            <p class="nazwa nazwa-gry">The Sims</p>
+            <img class="img-logo" src="../img/logo/simslogo.png" alt="" style="bottom: -37%" />
+          </a>
+          <a href="#starve" class="gra" data-filtr="single multi survival pc ps xbox switch mobilne Klei steam" alt="Dont Starve">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/starve.png" alt="Dont Starve" />
+            <p class="nazwa nazwa-gry">Don't Starve</p>
+            <img class="img-logo" src="../img/logo/starvelogo.png" alt="" style="bottom: -47%" />
+          </a>
+          <a href="#warship" class="gra" data-filtr="multi MMORPG pc Smilegate steam" alt="world of warship">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/warship.jpg" alt="world of warship" />
+            <p class="nazwa nazwa-gry">World of Warships</p>
+            <img class="img-logo" src="../img/logo/warshiplogo.png" alt="" style="bottom: -37%" />
+          </a>
+          <a href="#ark" class="gra" data-filtr="multi MMORPG pc Smilegate steam" alt="Ark: Survival Evolved">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/ark.jpg" alt="Ark: Survival Evolved" />
+            <p class="nazwa nazwa-gry">Ark: Survival Evolved</p>
+            <img class="img-logo" src="../img/logo/arklogo.png" alt="" style="bottom: -58%" />
+          </a>
+          <a href="#gta" class="gra" data-filtr="multi MMORPG pc Smilegate steam" alt="Grand Theft Auto">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/gta.png" alt="Grand Theft Auto" />
+            <p class="nazwa nazwa-gry">Grand Theft Auto</p>
+            <img class="img-logo" src="../img/logo/gtalogo.png" alt="" style="bottom: -40%" />
+          </a>
+          <a href="#diablo" class="gra" data-filtr="multi MMORPG pc Smilegate steam" alt="diablo">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/diablo.jpg" alt="diablo" />
+            <p class="nazwa nazwa-gry">diablo</p>
+            <img class="img-logo" src="../img/logo/diablologo.png" alt="" style="bottom: -29%" />
+          </a>
+          <a href="#metin" class="gra" data-filtr="multi MMORPG pc Webzen w-inne" alt="Metin">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <img class="img-gry" src="../img/gra/metin.jpg" alt="metin" />
+            <p class="nazwa nazwa-gry">Metin 2</p>
+            <img class="img-logo" src="../img/logo/metinlogo.png" alt="" style="bottom: -25.5%" />
+          </a>
+        </section>
+        <section class="aktualnosci" id="aktualnosci">
+          <a class="strony" data-filtr="" href="https://jarock.pl/" target="_blank" alt="jarock">
+            <div class="strona">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="img-strona" src="../img/strony/jarock.png" alt="" />
+              <p class="nazwa nazwa-strony">Ja,Rock!</p>
+            </div>
+          </a>
+          <a class="strony" data-filtr="" href="https://cdaction.pl/" target="_blank" alt="cdaction">
+            <div class="strona">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="img-strona" src="../img/strony/cda.png" alt="cdaction" />
+              <p class="nazwa nazwa-strony">cdaction</p>
+            </div>
+          </a>
+          <a class="strony" data-filtr="" href="https://planetagracza.pl" target="_blank" alt="planeta gracza">
+            <div class="strona">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="img-strona" src="../img/strony/planetagracza.png" alt="" />
+              <p class="nazwa nazwa-strony">Planeta Gracza</p>
+            </div>
+          </a>
+          <a class="strony" data-filtr="" href="https://www.benchmark.pl/kategoria/gry.html" target="_blank" alt="benchmark">
+            <div class="strona">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="img-strona" src="../img/strony/benchmark.png" alt="" />
+              <p class="nazwa nazwa-strony">benchmark</p>
+            </div>
+          </a>
+          <a class="strony" data-filtr="" href="https://www.ppe.pl/news.html" target="_blank" alt="ppe">
+            <div class="strona">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="img-strona" src="../img/strony/ppe.png" alt="" />
+              <p class="nazwa nazwa-strony">PPE</p>
+            </div>
+          </a>
+          <a class="strony" data-filtr="" href="https://www.komputerswiat.pl/gamezilla" target="_blank" alt="komputer świat">
+            <div class="strona">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="img-strona" src="../img/strony/komswiat.jpg" alt="" />
+              <p class="nazwa nazwa-strony">komputer swiat</p>
+            </div>
+          </a>
+          <a class="strony" data-filtr="" href="https://www.gry-online.pl/newsroom/news/" target="_blank" alt="gry online">
+            <div class="strona">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="img-strona" src="../img/strony/gryonline.png" alt="" />
+              <p class="nazwa nazwa-strony">gry-online</p>
+            </div>
+          </a>
+          <a class="strony" data-filtr="" href="https://lowcygier.pl/aktualnosci/" target="_blank" alt="Łowcy gier">
+            <div class="strona">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="img-strona" src="../img/strony/lowcygier.png" alt="" />
+              <p class="nazwa nazwa-strony">Łowcy gier</p>
+            </div>
+          </a>
+          <a class="strony" data-filtr="" href="https://www.eurogamer.pl/news" target="_blank" alt="eurogamer">
+            <div class="strona">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="img-strona" src="../img/strony/eurog.png" alt="" />
+              <p class="nazwa nazwa-strony">eurogamer</p>
+            </div>
+          </a>
+          <a class="strony" data-filtr="" href="https://www.miastogier.pl/news.html" target="_blank" alt="miastogier">
+            <div class="strona">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="img-strona" src="../img/strony/miastogier.jpg" alt="" />
+              <p class="nazwa nazwa-strony">miastogier</p>
+            </div>
+          </a>
+          <a class="strony" data-filtr="" href="https://ithardware.pl/aktualnosci.html" target="_blank" alt="ithardware">
+            <div class="strona">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="img-strona" src="../img/strony/ithardware.png" alt="" />
+              <p class="nazwa nazwa-strony">ithardware</p>
+            </div>
+          </a>
+          <a class="strony" data-filtr="" href="https://polskigamedev.pl" target="_blank" alt="polskigamedev">
+            <div class="strona">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="img-strona" src="../img/strony/pg.png" alt="" />
+              <p class="nazwa nazwa-strony">polskigamedev</p>
+            </div>
+          </a>
+          <a class="strony" data-filtr="" href="https://www.gram.pl/news/gry" target="_blank" alt="gram">
+            <div class="strona">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="img-strona" src="../img/strony/gram.jpg" alt="" />
+              <p class="nazwa nazwa-strony">gram</p>
+            </div>
+          </a>
+          <a class="strony" data-filtr="" href="https://gamingsociety.pl/gry/" target="_blank" alt="gamingsociety">
+            <div class="strona">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="img-strona" src="../img/strony/gs.jpg" alt="" />
+              <p class="nazwa nazwa-strony">gamingsociety</p>
+            </div>
+          </a>
+        </section>
+        <section class="sklepy" id="inne">
+          <a class="strony" data-filtr="nowy" href="https://www.eneba.com/pl/" target="_blank" alt="eneba">
+            <div class="strona">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="img-strona" src="../img/sklepy/eneba.png" alt="" />
+              <p class="nazwa nazwa-strony">eneba</p>
+            </div>
+          </a>
+          <a class="strony" data-filtr="nowy" href="https://www.kinguin.net" target="_blank" alt="kinguin">
+            <div class="strona">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="img-strona" src="../img/sklepy/kinguin.jpg" alt="" />
+              <p class="nazwa nazwa-strony">kinguin</p>
+            </div>
+          </a>
+          <a class="strony" data-filtr="nowy uzywane" href="https://playandgo.pl/" target="_blank" alt="play & go">
+            <div class="strona">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="img-strona" src="../img/sklepy/pandgo.jpg" alt="" />
+              <p class="nazwa nazwa-strony">play & go</p>
+            </div>
+          </a>
+          <a class="strony" data-filtr="nowy" href="https://www.gamivo.com/" target="_blank" alt="gamivo">
+            <div class="strona">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="img-strona" src="../img/sklepy/gamivo.jpg" alt="" />
+              <p class="nazwa nazwa-strony">gamivo</p>
+            </div>
+          </a>
+          <a class="strony" data-filtr="nowy uzywane" href="https://www.nogame.pl/" target="_blank" alt="nogame">
+            <div class="strona">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="img-strona" src="../img/sklepy/nogame.jpg" alt="" />
+              <p class="nazwa nazwa-strony">nogame</p>
+            </div>
+          </a>
+          <a class="strony" data-filtr="nowy" href="https://www.g2a.com/pl/" target="_blank" alt="g2a">
+            <div class="strona">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="img-strona" src="../img/sklepy/g2a.jpg" alt="" />
+              <p class="nazwa nazwa-strony">g2a</p>
+            </div>
+          </a>
+          <a class="strony" data-filtr="nowy" href="https://pl.webuy.com/" target="_blank" alt="cex">
+            <div class="strona">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="img-strona" src="../img/sklepy/cex.jpg" alt="" />
+              <p class="nazwa nazwa-strony">cex</p>
+            </div>
+          </a>
+          <a class="strony" data-filtr="nowy uzywane" href="https://www.krakow.gameover.pl/sklep/" target="_blank" alt="gameover">
+            <div class="strona">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="img-strona" src="../img/sklepy/GameOver.jpg" alt="" />
+              <p class="nazwa nazwa-strony">Gameover</p>
+            </div>
+          </a>
+          <a class="strony" data-filtr="nowy" href="https://www.humblebundle.com/" target="_blank" alt="humblebundle">
+            <div class="strona">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="img-strona" src="../img/sklepy/humble.jpg" alt="" />
+              <p class="nazwa nazwa-strony">humblebundle</p>
+            </div>
+          </a>
+          <a class="strony" data-filtr="nowy" href="https://gamefinity.pl/" target="_blank" alt="gamefinity">
+            <div class="strona">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="img-strona" src="../img/sklepy/gamefinity.jpg" alt="" />
+              <p class="nazwa nazwa-strony">gamefinity</p>
+            </div>
+          </a>
+        </section>
+
+        <section class="lista" id="lol">
+          <a href="https://www.op.gg" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/opgg.png" />
+            </div>
+            <div class="info-str">
+              <span>OP.GG</span>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
+          </a>
+          <a href="https://www.mobafire.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobafire.png" />
+            </div>
+          </a>
+          <a href="https://leagueoflegends.fandom.com/pl/wiki/League_of_Legends_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/fandomlol.jpg" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.leagueofgraphs.com/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolgraphs.png" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.deeplol.gg/mastery" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/deeplol.png" />
+            </div>
+          </a>
+          <a href="https://porofessor.gg/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/poro.png" />
+            </div>
+          </a>
+          <a href="https://mobalytics.gg/lol?int_source=homepage&int_medium=header" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobalytics.jpg" />
+            </div>
+          </a>
+          <a href="https://beta.riftkit.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolplanner.png" />
+            </div>
+          </a>
+          <a href="https://gol.gg/esports/home/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/gglol.png" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="lolwr">
+          <a href="https://wildriftguides.gg/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/wrg.jpg" />
+            </div>
+          </a>
+          <a href="https://mobileverso.com.br/en/wildrift/all-champions-and-builds" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/wrmobileverso.png" />
+            </div>
+          </a>
+          <a href="https://lolwildriftbuild.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/wrbuild.jpg" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://wr-meta.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/wrmeta.jpg" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.wildriftfire.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/wrfire.png" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="lor">
+          <a href="https://runeterraccg.com/metagame/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/lorccg.png" />
+            </div>
+          </a>
+          <a href="https://masteringruneterra.com/decks/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lormastering.jpg" />
+            </div>
+          </a>
+          <a href="https://app.mobalytics.gg/lor/decks" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobalytics.jpg" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.runeterrafire.com/decks" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lorfire.png" />
+            </div>
+          </a>
+          <a href="https://runeterra.ar/lor/decks" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lorar.png" style="background: white" />
+            </div>
+          </a>
+          <a href="https://runeterra-decks.pro/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lordeckpro.png" style="background: white" />
+            </div>
+          </a>
+          <a href="https://dak.gg/lor/?hl=en-US" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lordakgg.png" />
+            </div>
+          </a>
+          <a href="https://www.leagueofgraphs.com/pl/lor/cards" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolgraphs.png" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="tft">
+          <a href="https://www.leagueofgraphs.com/pl/tft" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/lolgraphs.png" />
+            </div>
+          </a>
+          <a href="https://tftactics.gg/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/tfttactic.png" />
+            </div>
+          </a>
+          <a href="https://www.metatft.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/metatft.jpg" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://lolchess.gg/?hl=pl" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/tftchess.png" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://tracker.gg/tft" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/tracker.webp" />
+            </div>
+          </a>
+          <a href="https://tactics.tools/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/tfttools.png" />
+            </div>
+          </a>
+          <a href="https://mobalytics.gg/blog/tft/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobalytics.jpg" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="dota">
+          <a href="https://dota2.fandom.com/wiki/Dota_2_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/dotawiki.jpg" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://dotamax.cloud/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/dotamax.jpg" />
+            </div>
+          </a>
+          <a href="https://www.opendota.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/dotaopen.png" />
+            </div>
+          </a>
+          <a href="https://dota2protracker.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/dota2pro.jpg" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://spectral.gg/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/dotaspectral.png" style="background: rgb(0, 0, 0)" />
+            </div>
+          </a>
+          <a href="https://stratz.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/dotastratz.png" />
+            </div>
+          </a>
+          <a href="https://pl.dotabuff.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/dotabuff.png" />
+            </div>
+          </a>
+          <a href="https://www.datdota.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/dotadat.png" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="smite">
+          <a href="https://smite.fandom.com/wiki/Smite_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/fandomsmite.png" />
+            </div>
+          </a>
+          <a href="https://ranked.casualsmite.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/casualsmite.jpg" />
+            </div>
+          </a>
+          <a href="https://smitesource.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/smitesource.jpg" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.smitefire.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolgraphs.png" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.smitefire.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/deeplol.png" />
+            </div>
+          </a>
+          <a href="https://www.smitegame.com/items/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/poro.png" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="rocket">
+          <a href="https://rocketleague.fandom.com/wiki/Rocket_League_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/rlfandom.jpg" />
+            </div>
+          </a>
+          <a href="https://rocket-league.com/items" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/rlgarage.png" />
+            </div>
+          </a>
+
+          <a href="https://rocketleague.tracker.network/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/rltracker.png" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://rl.exchange/pl" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/rlexchange.png" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="nba">
+          <a href="https://2kdb.net/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/2kdb.png" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.2kratings.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/2krating.png" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="eafc">
+          <a href="https://www.ea.com/ea-sports-fc/ultimate-team/web-app/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/webapp.jpg" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.futbin.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/futbin.png" style="background: rgb(76, 214, 180)" />
+            </div>
+          </a>
+          <a href="https://sofifa.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/sofifa.png" style="background: black" />
+            </div>
+          </a>
+          <a href="https://www.futwiz.com/en/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/futwiz.png" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+
+          <a href="https://www.fifacm.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/fifacm.png" />
+            </div>
+          </a>
+          <a href="https://www.futwiz.com/en/fifa23/career-mode/players" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/futwizc.png" />
+            </div>
+          </a>
+          <a href="https://www.fifaindex.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/fifaindex.png" />
+            </div>
+          </a>
+          <a href="https://fifatracker.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/fifatracker.png" style="background: black" />
+            </div>
+          </a>
+          <a href="https://new.fifasite.pl/download/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/fifasite.jpg" />
+            </div>
+          </a>
+          <a href="https://www.nexusmods.com/eafc24" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/NexusMods.png" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="cod">
+          <a href="https://www.op.gg" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/opgg.png" />
+            </div>
+          </a>
+          <a href="https://www.mobafire.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobafire.png" />
+            </div>
+          </a>
+          <a href="https://leagueoflegends.fandom.com/pl/wiki/League_of_Legends_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/fandomlol.jpg" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.leagueofgraphs.com/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolgraphs.png" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.deeplol.gg/mastery" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/deeplol.png" />
+            </div>
+          </a>
+          <a href="https://porofessor.gg/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/poro.png" />
+            </div>
+          </a>
+          <a href="https://mobalytics.gg/lol?int_source=homepage&int_medium=header" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobalytics.jpg" />
+            </div>
+          </a>
+          <a href="https://beta.riftkit.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolplanner.png" />
+            </div>
+          </a>
+          <a href="https://gol.gg/esports/home/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/gglol.png" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="r6">
+          <a href="https://r6.tracker.network/profile/pc/aJpaR" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/tracker.webp" />
+            </div>
+          </a>
+          <a href="https://r6stats.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/r6stats.png" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://r6strat.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/r6strat.png" style="background: black" />
+            </div>
+          </a>
+          <a href="https://pl.wottactic.com/R6" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/wottatic.png" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://r6guides.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/r6guid.jpg" />
+            </div>
+          </a>
+
+          <a href="https://r6analyst.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/r6analyst.png" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="cs">
+          <a href="https://csgostash.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/csgostash.png" />
+            </div>
+          </a>
+          <a href="https://csgoskins.gg/categories/skin" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/csskins.png" />
+            </div>
+          </a>
+          <a href="https://counterstrike.fandom.com/wiki/Counter-Strike_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/cswiki.png" style="background: rgb(110, 52, 0)" />
+            </div>
+          </a>
+          <a href="https://csstats.gg" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/csstats.jpg" />
+            </div>
+          </a>
+          <a href="https://tracker.gg/cs2" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/tracker.webp" />
+            </div>
+          </a>
+          <a href="https://scope.gg" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/csscope.png" />
+            </div>
+          </a>
+          <a href="https://csgo-stats.pl" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/csgostats.png" />
+            </div>
+          </a>
+          <a href="https://leetify.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/leetify.png" />
+            </div>
+          </a>
+          <a href="https://cs-sticker.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/cssticker.png" />
+            </div>
+          </a>
+
+          <a href="https://www.zestrat.gg" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/zestart.jpg" />
+            </div>
+          </a>
+          <a href="https://pl.wottactic.com/csgo" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/wottatic.png" style="background: black" />
+            </div>
+          </a>
+          <a href="https://csgoboard.com/board/new" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/csgoboard.png" />
+            </div>
+          </a>
+          <a href="https://www.noesis.gg/csgo-strategy-board/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/noesis.png" />
+            </div>
+          </a>
+          <a href="https://sniper13.pl" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/sniper13.jpg" />
+            </div>
+          </a>
+          <a href="https://www.hltv.org/stats" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/hltv.webp" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="fortnite">
+          <a href="https://www.op.gg" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/opgg.png" />
+            </div>
+          </a>
+          <a href="https://www.mobafire.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobafire.png" />
+            </div>
+          </a>
+          <a href="https://leagueoflegends.fandom.com/pl/wiki/League_of_Legends_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/fandomlol.jpg" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.leagueofgraphs.com/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolgraphs.png" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.deeplol.gg/mastery" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/deeplol.png" />
+            </div>
+          </a>
+          <a href="https://porofessor.gg/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/poro.png" />
+            </div>
+          </a>
+          <a href="https://mobalytics.gg/lol?int_source=homepage&int_medium=header" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobalytics.jpg" />
+            </div>
+          </a>
+          <a href="https://beta.riftkit.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolplanner.png" />
+            </div>
+          </a>
+          <a href="https://gol.gg/esports/home/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/gglol.png" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="val">
+          <a href="https://www.op.gg" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/opgg.png" />
+            </div>
+          </a>
+          <a href="https://www.mobafire.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobafire.png" />
+            </div>
+          </a>
+          <a href="https://leagueoflegends.fandom.com/pl/wiki/League_of_Legends_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/fandomlol.jpg" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.leagueofgraphs.com/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolgraphs.png" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.deeplol.gg/mastery" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/deeplol.png" />
+            </div>
+          </a>
+          <a href="https://porofessor.gg/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/poro.png" />
+            </div>
+          </a>
+          <a href="https://mobalytics.gg/lol?int_source=homepage&int_medium=header" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobalytics.jpg" />
+            </div>
+          </a>
+          <a href="https://beta.riftkit.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolplanner.png" />
+            </div>
+          </a>
+          <a href="https://gol.gg/esports/home/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/gglol.png" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="pubg">
+          <a href="https://www.op.gg" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/opgg.png" />
+            </div>
+          </a>
+          <a href="https://www.mobafire.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobafire.png" />
+            </div>
+          </a>
+          <a href="https://leagueoflegends.fandom.com/pl/wiki/League_of_Legends_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/fandomlol.jpg" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.leagueofgraphs.com/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolgraphs.png" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.deeplol.gg/mastery" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/deeplol.png" />
+            </div>
+          </a>
+          <a href="https://porofessor.gg/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/poro.png" />
+            </div>
+          </a>
+          <a href="https://mobalytics.gg/lol?int_source=homepage&int_medium=header" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobalytics.jpg" />
+            </div>
+          </a>
+          <a href="https://beta.riftkit.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolplanner.png" />
+            </div>
+          </a>
+          <a href="https://gol.gg/esports/home/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/gglol.png" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="apex">
+          <a href="https://www.op.gg" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/opgg.png" />
+            </div>
+          </a>
+          <a href="https://www.mobafire.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobafire.png" />
+            </div>
+          </a>
+          <a href="https://leagueoflegends.fandom.com/pl/wiki/League_of_Legends_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/fandomlol.jpg" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.leagueofgraphs.com/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolgraphs.png" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.deeplol.gg/mastery" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/deeplol.png" />
+            </div>
+          </a>
+          <a href="https://porofessor.gg/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/poro.png" />
+            </div>
+          </a>
+          <a href="https://mobalytics.gg/lol?int_source=homepage&int_medium=header" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobalytics.jpg" />
+            </div>
+          </a>
+          <a href="https://beta.riftkit.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolplanner.png" />
+            </div>
+          </a>
+          <a href="https://gol.gg/esports/home/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/gglol.png" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="ov">
+          <a href="https://www.op.gg" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/opgg.png" />
+            </div>
+          </a>
+          <a href="https://www.mobafire.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobafire.png" />
+            </div>
+          </a>
+          <a href="https://leagueoflegends.fandom.com/pl/wiki/League_of_Legends_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/fandomlol.jpg" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.leagueofgraphs.com/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolgraphs.png" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.deeplol.gg/mastery" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/deeplol.png" />
+            </div>
+          </a>
+          <a href="https://porofessor.gg/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/poro.png" />
+            </div>
+          </a>
+          <a href="https://mobalytics.gg/lol?int_source=homepage&int_medium=header" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobalytics.jpg" />
+            </div>
+          </a>
+          <a href="https://beta.riftkit.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolplanner.png" />
+            </div>
+          </a>
+          <a href="https://gol.gg/esports/home/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/gglol.png" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="bf">
+          <a href="https://www.op.gg" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/opgg.png" />
+            </div>
+          </a>
+          <a href="https://www.mobafire.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobafire.png" />
+            </div>
+          </a>
+          <a href="https://leagueoflegends.fandom.com/pl/wiki/League_of_Legends_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/fandomlol.jpg" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.leagueofgraphs.com/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolgraphs.png" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.deeplol.gg/mastery" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/deeplol.png" />
+            </div>
+          </a>
+          <a href="https://porofessor.gg/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/poro.png" />
+            </div>
+          </a>
+          <a href="https://mobalytics.gg/lol?int_source=homepage&int_medium=header" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobalytics.jpg" />
+            </div>
+          </a>
+          <a href="https://beta.riftkit.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolplanner.png" />
+            </div>
+          </a>
+          <a href="https://gol.gg/esports/home/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/gglol.png" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="mc">
+          <a href="https://minecraft.fandom.com/wiki/Minecraft_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/mcwiki.webp" />
+            </div>
+          </a>
+          <a href="https://www.minecraft-crafting.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobafire.png" />
+            </div>
+          </a>
+          <a href="https://www.minecraftcraftingguide.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/fandomlol.jpg" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://minecraft.tools/en/crafting.php" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolgraphs.png" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.minecraftcrafting.info" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/deeplol.png" />
+            </div>
+          </a>
+          <a href="https://porofessor.gg/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/poro.png" />
+            </div>
+          </a>
+          <a href="https://mobalytics.gg/lol?int_source=homepage&int_medium=header" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobalytics.jpg" />
+            </div>
+          </a>
+          <a href="https://beta.riftkit.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolplanner.png" />
+            </div>
+          </a>
+          <a href="https://gol.gg/esports/home/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/gglol.png" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="wot">
+          <a href="https://www.op.gg" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/opgg.png" />
+            </div>
+          </a>
+          <a href="https://www.mobafire.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobafire.png" />
+            </div>
+          </a>
+          <a href="https://leagueoflegends.fandom.com/pl/wiki/League_of_Legends_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/fandomlol.jpg" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.leagueofgraphs.com/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolgraphs.png" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.deeplol.gg/mastery" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/deeplol.png" />
+            </div>
+          </a>
+          <a href="https://porofessor.gg/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/poro.png" />
+            </div>
+          </a>
+          <a href="https://mobalytics.gg/lol?int_source=homepage&int_medium=header" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobalytics.jpg" />
+            </div>
+          </a>
+          <a href="https://beta.riftkit.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolplanner.png" />
+            </div>
+          </a>
+          <a href="https://gol.gg/esports/home/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/gglol.png" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="wow">
+          <a href="https://www.op.gg" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/opgg.png" />
+            </div>
+          </a>
+          <a href="https://www.mobafire.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobafire.png" />
+            </div>
+          </a>
+          <a href="https://leagueoflegends.fandom.com/pl/wiki/League_of_Legends_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/fandomlol.jpg" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.leagueofgraphs.com/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolgraphs.png" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.deeplol.gg/mastery" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/deeplol.png" />
+            </div>
+          </a>
+          <a href="https://porofessor.gg/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/poro.png" />
+            </div>
+          </a>
+          <a href="https://mobalytics.gg/lol?int_source=homepage&int_medium=header" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobalytics.jpg" />
+            </div>
+          </a>
+          <a href="https://beta.riftkit.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolplanner.png" />
+            </div>
+          </a>
+          <a href="https://gol.gg/esports/home/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/gglol.png" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="hs">
+          <a href="https://hsreplay.net/decks/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/hsreplay.png" />
+            </div>
+          </a>
+          <a href="http://metastats.net/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/hsmetastats.png" style="background: white" />
+            </div>
+          </a>
+          <a href="https://www.hearthstonetopdecks.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/hstopdeck.jpg" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.hearthpwn.com/decks" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/hspwn.webp" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://hearthstone-decks.net/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/hsdeck.png" />
+            </div>
+          </a>
+          <a href="https://tempostorm.com/hearthstone/decks" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/hstempstorm.png" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="thesims">
+          <a href="https://www.op.gg" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/opgg.png" />
+            </div>
+          </a>
+          <a href="https://www.mobafire.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobafire.png" />
+            </div>
+          </a>
+          <a href="https://leagueoflegends.fandom.com/pl/wiki/League_of_Legends_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/fandomlol.jpg" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.leagueofgraphs.com/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolgraphs.png" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.deeplol.gg/mastery" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/deeplol.png" />
+            </div>
+          </a>
+          <a href="https://porofessor.gg/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/poro.png" />
+            </div>
+          </a>
+          <a href="https://mobalytics.gg/lol?int_source=homepage&int_medium=header" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobalytics.jpg" />
+            </div>
+          </a>
+          <a href="https://beta.riftkit.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolplanner.png" />
+            </div>
+          </a>
+          <a href="https://gol.gg/esports/home/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/gglol.png" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="starve">
+          <a href="https://dontstarve.fandom.com/pl/wiki/Don%27t_Starve_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/starvelogo.webp" />
+            </div>
+          </a>
+          <a href="https://dontstarve.wiki.gg/wiki/Don%27t_Starve_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/wikiggstarve.png" />
+            </div>
+          </a>
+          <a href="https://gigglingcorpse.com/dev/dontstarvetogether/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/fandomlol.jpg" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://dstitems.github.io/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolgraphs.png" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://dstitems.github.io/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/deeplol.png" />
+            </div>
+          </a>
+          <a href="https://porofessor.gg/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/poro.png" />
+            </div>
+          </a>
+          <a href="https://mobalytics.gg/lol?int_source=homepage&int_medium=header" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mobalytics.jpg" />
+            </div>
+          </a>
+          <a href="https://beta.riftkit.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/lolplanner.png" />
+            </div>
+          </a>
+          <a href="https://gol.gg/esports/home/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/gglol.png" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="warship">
+          <a href="https://world-of-warships.fandom.com/wiki/World_of_Warships_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/wowwiki.webp" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://wows-numbers.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/wowsnumbers.ico" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://www.wowsbuilds.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/wowsbuilds.jpg" />
+            </div>
+          </a>
+          <a href="https://mwstats.info/ships" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mwstats.png" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="ark">
+          <a href="https://ark-unity.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/ARKUnity.webp" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://ark.fandom.com/wiki/ARK_Survival_Evolved_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/arkfandom.ico" />
+            </div>
+          </a>
+          <a href="https://ark.wiki.gg/wiki/ARK_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/arkwikigg.png" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://arkcheat.com/item-ids" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/arkids.png" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://arkcheat.com/item-ids" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/deeplol.png" />
+            </div>
+          </a>
+          <a href="https://arkcheat.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/arkcheat.webp" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="gta">
+          <a href="https://gta.fandom.com/pl/wiki/Grand_Theft_Auto_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/gtawiki.webp" style="background: rgb(0, 0, 0)" />
+            </div>
+          </a>
+          <a href="https://www.gtabase.com/grand-theft-auto-v" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/gtabase.jpg" />
+            </div>
+          </a>
+          <a href="https://wiki.rage.mp/index.php?title=Vehicles" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/gtarage.ico" />
+            </div>
+          </a>
+          <a href="https://gtacars.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/gtacars.png" style="background: rgb(0, 0, 0)" />
+            </div>
+          </a>
+          <a href="https://pl.gta5-mods.com/vehicles" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/gta5mod.webp" style="background: #20ba4e" />
+            </div>
+          </a>
+          <a href="https://socialclub.rockstargames.com/games/gtav/index-signin?ageGate=True" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/rockstar.png" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="diablo">
+          <a href="https://diablo.fandom.com/pl/wiki/Diablo_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/diablofandom.png" style="background: rgb(0, 0, 0)" />
+            </div>
+          </a>
+          <a href="https://d4builds.gg/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/d4builds.svg" style="background: rgb(0, 0, 0)" />
+            </div>
+          </a>
+          <a href="https://diablotrade.gg/?cursor=" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/diablotrade.jpg" />
+            </div>
+          </a>
+          <a href="https://www.wowhead.com/diablo-4" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/wowheaddiablo.png" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://diablo4.wiki.fextralife.com/Diablo+4+Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/fextralifediablo.jpg" />
+            </div>
+          </a>
+          <a href="https://mapgenie.io/diablo-4/maps/sanctuary" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mapgeniediablo.webp" />
+            </div>
+          </a>
+          <a href="https://diablo4.cc/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/diablo4cc.png" />
+            </div>
+          </a>
+        </section>
+        <section class="lista" id="metin">
+          <a href="https://pl-wiki.metin2.gameforge.com/index.php/Strona_g%C5%82%C3%B3wna" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <img class="heart" src="../img/heartempty.png" alt="" />
+            <div class="logo-strony">
+              <img class="str-gry" src="../img/strgier/metin2wiki.png" style="background: white" />
+            </div>
+          </a>
+          <a href="https://serwerymetin2.pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/mt2priv.jpg" />
+            </div>
+          </a>
+          <a href="https://www.metin2.priv.pl/servers" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/metin2.png" />
+            </div>
+          </a>
+          <a href="https://metin2pserver.net/Ranking.pl" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/metin2server.jpg" style="background: rgb(5, 9, 43)" />
+            </div>
+          </a>
+          <a href="https://m2icondb.com/  " class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/m2icondb.jpeg" />
+            </div>
+          </a>
+          <a href="https://metin2cms.cf/items/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/metin2cms.png" style="background: black" />
+            </div>
+          </a>
+          <a href="http://wiki.imetin.pl/index.php?title=Strona_g%C5%82%C3%B3wna" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="../img/heartempty.png" alt="" />
+              <img class="str-gry" src="../img/strgier/imetin2.png" style="background: black" />
+            </div>
+          </a>
+        </section>
+      </aside>
+    </main>
+    <script src="../js/app.js"></script>
+  </body>
+</html>
