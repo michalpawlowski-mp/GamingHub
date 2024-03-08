@@ -103,7 +103,7 @@ h1
     justify-content: center;
     text-align: center;
     height: 100%;
-    width: 15%;
+    width: 14%;
     overflow: hidden;
     position: relative; 
     
@@ -505,12 +505,17 @@ input[type='radio'], input[type='checkbox'] {
     margin-right: 10px;
     color: red;
 }
+.rozwijanie
+{
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 1%;
+}
 .arrow {
     height: 40px;
     width: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
     transition: transform 0.3s ease;
     z-index: 2;
     position: absolute;
@@ -577,6 +582,7 @@ input[type='radio'], input[type='checkbox'] {
     .panel
     {
         height: 85%;
+        box-shadow: none;
     }
     .gra {
         width: 175px;
@@ -591,5 +597,18 @@ input[type='radio'], input[type='checkbox'] {
     {
         font-size: 85%;
         margin: 5px;
+    }
+    .sort
+    {
+        padding: 5px;
+    }
+    .rozwijanie
+    {
+        height: 1%;
+        width: 100%;
+    }
+    h1
+    {
+        font-size: 30px;
     }
 }
