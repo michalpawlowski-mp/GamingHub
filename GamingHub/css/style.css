@@ -585,7 +585,7 @@ input[type='radio'], input[type='checkbox'] {
         box-shadow: none;
     }
     .gra {
-        width: 175px;
+        width: 155px;
         height: 200px;
     }
     .nazwa-gry
@@ -595,7 +595,7 @@ input[type='radio'], input[type='checkbox'] {
     }
     nav > a
     {
-        font-size: 85%;
+        font-size: 80%;
         margin: 5px;
     }
     .sort
