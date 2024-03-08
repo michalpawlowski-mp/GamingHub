@@ -566,6 +566,10 @@ input[type='radio'], input[type='checkbox'] {
     .filtr, .zakladka {
         width: 100%;
     }
+    .filtr
+    {
+        height: 15%;
+    }
     .lupa
     {
         width: 3%;
