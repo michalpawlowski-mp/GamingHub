@@ -397,7 +397,6 @@ input[type='radio'], input[type='checkbox'] {
     display: none;
 }
 .gry {
-     margin: 20px;
     display: flex;
 }
 #sortowanieGry
