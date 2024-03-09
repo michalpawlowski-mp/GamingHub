@@ -49,24 +49,44 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+let links = document.querySelectorAll('a');
 
-  let links = document.querySelectorAll('a');
+links.forEach(function(link) {
+  link.addEventListener('click', function() {
 
-  links.forEach(function(link) {
-    link.addEventListener('click', function(event) {
+    let sectionId = this.getAttribute('href').substring(1);
 
-      let sectionId = this.getAttribute('href').substring(1);
+    let section = document.querySelector('#' + sectionId + '.lista');
 
-      let section = document.querySelector('#' + sectionId);
-
+    if (section) {
       let allSections = document.querySelectorAll('section');
       allSections.forEach(function(sec) {
         sec.style.display = 'none';
       });
 
       section.style.display = 'flex';
-    });
+
+      let divSortGry = document.querySelector('#sortowanieGry');
+      let divSortAkt = document.querySelector('#sortowanieAkt');
+      let divSortInne = document.querySelector('#sortowanieInne');
+      let confirm = document.querySelector('#confirm');
+      let zatwierdzenie = document.querySelector('.zatwierdzenie');
+      let panel = document.querySelector('.panel');
+      let sort = document.querySelector('.sort');
+      let wyszukiwanie = document.querySelector('.wyszukiwanie');
+
+      if (divSortGry) divSortGry.style.display = 'none';
+      if (divSortAkt) divSortAkt.style.display = 'none';
+      if (divSortInne) divSortInne.style.display = 'none';
+      if (confirm) confirm.style.display = 'none';
+      if (zatwierdzenie) zatwierdzenie.style.height = '0%';
+      if (panel) panel.style.display = 'auto';
+      if (sort) sort.style.height = '55%';
+      if (wyszukiwanie) wyszukiwanie.style.height = '66px';
+    }
+
   });
+});
 });
 
 
@@ -112,7 +132,7 @@ const originalHeightWyszukiwanie = getComputedStyle(wyszukiwanieDiv).height;
 const originalSizeLupa = getComputedStyle(lupaImg).width;
 
 // Zwijamy divy na starcie i zmieniamy wysokość diva .filtr na 10%
-if (window.innerWidth < 1125) {
+if (window.innerWidth < 1315) {
   filtrowanieDiv.style.display = "none";
   zatwierdzanieDiv.style.display = "none";
   filtrDiv.style.height = "10%";
@@ -120,7 +140,7 @@ if (window.innerWidth < 1125) {
 }
 
 const toggleVisibility = () => {
-  if (window.innerWidth < 1125) {
+  if (window.innerWidth < 1315) {
     const isHidden = filtrowanieDiv.style.display === "none";
     filtrowanieDiv.style.display = isHidden ? "flex" : "none";
     zatwierdzanieDiv.style.display = isHidden ? "flex" : "none";
@@ -133,7 +153,7 @@ const toggleVisibility = () => {
 triangleDiv.addEventListener('click', toggleVisibility);
 
 window.addEventListener('resize', () => {
-  if (window.innerWidth < 1125) {
+  if (window.innerWidth < 1315) {
     filtrowanieDiv.style.display = "none";
     zatwierdzanieDiv.style.display = "none";
     filtrDiv.style.height = "10%";
@@ -216,9 +236,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const localStorageKey = 'heart' + (sectionIndex * sections.length + heartIndex);
 
       if (localStorage.getItem(localStorageKey) === 'red') {
-        heart.src = '/img/heartred.png';
+        heart.src = '../img/heartred.png';
       } else {
-        heart.src = '/img/heartempty.png';
+        heart.src = '../img/heartempty.png';
       }
 
       heart.addEventListener('click', (event) => {
@@ -226,10 +246,10 @@ document.addEventListener('DOMContentLoaded', () => {
         event.stopPropagation(); 
 
         if (heart.src.includes('heartempty')) {
-          heart.src = '/img/heartred.png';
+          heart.src = '../img/heartred.png';
           localStorage.setItem(localStorageKey, 'red');
         } else {
-          heart.src = '/img/heartempty.png';
+          heart.src = '../img/heartempty.png';
           localStorage.setItem(localStorageKey, 'empty');
         }
         sortDivs(section);
@@ -282,10 +302,10 @@ document.addEventListener('DOMContentLoaded', () => {
     removeFavoritesButton.style.display = 'none';
   }
 
-  sections.forEach((section, sectionIndex) => {
+  sections.forEach((section) => {
     const hearts = Array.from(section.querySelectorAll('.heart'));
 
-    hearts.forEach((heart, heartIndex) => {
+    hearts.forEach((heart) => {
       // Obserwuj zmiany atrybutu src serca
       const observer = new MutationObserver((mutations) => {
         mutations.forEach((mutation) => {
@@ -314,7 +334,7 @@ document.addEventListener('DOMContentLoaded', () => {
       hearts.forEach((heart, heartIndex) => {
         const localStorageKey = 'heart' + (sectionIndex * sections.length + heartIndex);
 
-        heart.src = '/img/heartempty.png';
+        heart.src = '../img/heartempty.png';
         localStorage.setItem(localStorageKey, 'empty');
       });
     });
@@ -331,8 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Sortowanie alfabetyczne
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
   const azRadio = document.querySelector('#az');
   const zaRadio = document.querySelector('#za');
   const removeSortButton = document.querySelector('#usunalfabetyczne');
@@ -359,6 +378,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     azRadio.checked = false;
     zaRadio.checked = false;
   });
+
   function sortElementsAlphabetically(ascending) {
     sections.forEach((section) => {
       const elements = Array.from(section.querySelectorAll('a.gra, a.strony'));
@@ -378,14 +398,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
       });
     });
   }
+
   function removeAlphabeticalSorting() {
     sections.forEach((section, index) => {
+      while (section.firstChild) {
+        section.removeChild(section.firstChild);
+      }
       originalOrder[index].forEach((element) => {
         section.appendChild(element);
       });
     });
   }
 });
+
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -462,69 +487,95 @@ arrow.addEventListener('click', function() {
   
   if (arrowClicked) {
     // Zmień style dla .filtr i .zakladka
-    if (window.innerWidth <= 1125) {
-      filtr.style.height = '0%'; // Zmień wysokość na 0%, jeśli szerokość okna jest mniejsza lub równa 1125px
-      zakladka.style.width = '100%';
-      // Zmień style dla .arrow
-      arrow.style.position = 'absolute';
-      arrow.style.top = '0';
-      arrow.style.left = '50%';
-      arrow.style.transform = 'translateX(-50%) rotate(90deg)';
-    } else {
-      filtr.style.width = '';
-      zakladka.style.width = '';
-    }
+    filtr.style.display = 'none'; // Zmień display na 'none'
+    zakladka.style.display = 'flex'; // Zmień display na 'flex'
+    zakladka.style.width = '100%'; // Zmień width na '100%'
+    zakladka.style.height = '100%'; // Zmień height na '100%'
+    // Zmień style dla .arrow
+    updateArrowStyle();
     // Dodaj klasę 'clicked' do .arrow1 i .arrow2
     arrow1.classList.add('clicked');
     arrow2.classList.add('clicked');
   } else {
     // Przywróć pierwotne style dla .filtr i .zakladka
-    filtr.style.width = ''; // Zastąp pustym ciągiem, aby przywrócić domyślny styl
-    filtr.style.height = ''; // Zastąp pustym ciągiem, aby przywrócić domyślny styl
+    filtr.style.display = ''; // Zastąp pustym ciągiem, aby przywrócić domyślny styl
+    zakladka.style.display = ''; // Zastąp pustym ciągiem, aby przywrócić domyślny styl
     zakladka.style.width = ''; // Zastąp pustym ciągiem, aby przywrócić domyślny styl
+    zakladka.style.height = ''; // Zastąp pustym ciągiem, aby przywrócić domyślny styl
     // Usuń klasę 'clicked' z .arrow1 i .arrow2
     arrow1.classList.remove('clicked');
     arrow2.classList.remove('clicked');
     // Przywróć pierwotne style dla .arrow
-    if (window.innerWidth <= 1125) {
-      arrow.style.position = 'absolute';
-      arrow.style.top = '0';
-      arrow.style.left = '50%';
-      arrow.style.transform = 'translateX(-50%) rotate(90deg)';
-    } else {
-      arrow.style.position = '';
-      arrow.style.top = '';
-      arrow.style.left = '';
-      arrow.style.transform = '';
-    }
+    updateArrowStyle();
   }
 });
 
 // Dodaj nasłuchiwacz zdarzeń DOMContentLoaded do dokumentu
 document.addEventListener('DOMContentLoaded', function() {
-  if (window.innerWidth <= 1125) {
-    // Zmień style dla .arrow
-    arrow.style.position = 'absolute';
-    arrow.style.top = '0';
-    arrow.style.left = '50%';
-    arrow.style.transform = 'translateX(-50%) rotate(90deg)';
-    
-    // Zmień style dla .filtr i .zakladka
-    if (arrowClicked) {
-      filtr.style.height = '0%';
-      zakladka.style.width = '100%';
-    } else {
-      filtr.style.height = '';
-      zakladka.style.width = '';
-    }
+  // Zmień style dla .arrow
+  updateArrowStyle();
+  
+  // Zmień style dla .filtr i .zakladka
+  if (arrowClicked) {
+    filtr.style.display = 'none';
+    zakladka.style.display = 'flex';
+    zakladka.style.width = '100%';
+    zakladka.style.height = '100%';
+  } else {
+    filtr.style.display = '';
+    zakladka.style.display = '';
+    zakladka.style.width = '';
+    zakladka.style.height = '';
   }
+});
+
+// Dodaj nasłuchiwacz zdarzeń resize do okna
+window.addEventListener('resize', function() {
+  // Aktualizuj style dla .arrow
+  updateArrowStyle();
 });
 
 // Ustaw .zakladka na position: relative;
 zakladka.style.position = 'relative';
 
+// Funkcja do aktualizacji stylu .arrow
+function updateArrowStyle() {
+  if (window.innerWidth <= 1315) {
+    arrow.style.position = 'absolute';
+    arrow.style.top = '0';
+    arrow.style.left = '50%';
+    arrow.style.transform = 'translateX(-50%) rotate(90deg)';
+  } else {
+    arrow.style.position = 'absolute';
+    arrow.style.top = '50%';
+    arrow.style.left = '0';
+    arrow.style.transform = 'translateY(-50%)';
+  }
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// Dodaj nasłuchiwacz zdarzeń do linków
+document.querySelectorAll('a').forEach(function(link) {
+  link.addEventListener('click', function(event) {
+    // Dodaj nowy wpis do historii przeglądarki
+    history.pushState({section: event.target.getAttribute('href')}, '');
+    console.log('Link clicked: ' + event.target.getAttribute('href')); // Dodaj console.log
+  });
+});
+
+// Dodaj nasłuchiwacz zdarzeń do okna
+window.addEventListener('popstate', function(event) {
+  if (event.state) {
+    // Znajdź link z odpowiednim atrybutem href
+    let link = document.querySelector(`a[href="${event.state.section}"]`);
+    if (link) {
+      // Symuluj kliknięcie linku
+      link.click();
+      console.log('Popstate event: ' + event.state.section); // Dodaj console.log
+    }
+  }
+});
 
