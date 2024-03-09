@@ -625,7 +625,7 @@ input[type='radio'], input[type='checkbox'] {
         font-size: 75%;
         margin: 5px;
     }
-    .strony
+    .aktualnosci > a, .sklepy > a
     {
         width: auto;
 	margin: auto;
