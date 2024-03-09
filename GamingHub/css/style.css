@@ -380,7 +380,7 @@ input[type='radio'], input[type='checkbox'] {
 }
 .aktualnosci > a, .sklepy > a
 {
-    margin: 20px;
+   
     color: white;
     text-decoration: none;
     text-transform: uppercase;
@@ -390,6 +390,7 @@ input[type='radio'], input[type='checkbox'] {
     display: none;
 }
 .gry {
+     margin: 20px;
     display: flex;
 }
 #sortowanieGry
@@ -560,7 +561,7 @@ input[type='radio'], input[type='checkbox'] {
     }
 
 
-@media (max-width: 1315px) {
+@media (max-width: 1315px)  {
     main {
         flex-direction: column;
     }
@@ -614,29 +615,24 @@ input[type='radio'], input[type='checkbox'] {
     }
     .strony
     {
-        width: 80%;
+        width: auto;
     }
 }
 
 
 @media (max-width: 700px) {
+
     nav > a
     {
         font-size: 75%;
         margin: 5px;
     }
-    .aktualnosci > a, .sklepy > a
-    {
+    .strony {
         width: auto;
-	margin: 10px 20px;
+        margin-top: 20px;
     }
     .gra {
         width: 160px;
         height: 190px;
     }
-	    .zakladka
-    {
-        width: auto;
-    }
-}
 }
