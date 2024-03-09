@@ -628,6 +628,7 @@ input[type='radio'], input[type='checkbox'] {
     {
         width: auto;
 	margin: auto;
+	    padding: auto;
     }
     .gra {
         width: 160px;
