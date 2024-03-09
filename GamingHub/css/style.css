@@ -371,25 +371,28 @@ input[type='radio'], input[type='checkbox'] {
     border: 2px solid rgb(255, 255, 255);
     border-radius: 20px;
     height: 200px;
-    width: 415px;
+    width: 500px;
     display: flex;
     position: relative;
     flex-wrap: wrap;
     background: rgba(255, 255, 255,0.2);
     overflow: hidden;  
+    margin: 10px;
 }
 .img-strona{
     height: 100%;
 }
 .nazwa-strony
 {
-    font-size: 25px;
+    font-size: 100%;
+    font-weight: 600;
+    font-family: 'Helvetica Neue', sans-serif;
     margin: 0 auto;
     padding-top: 10px;
 }
 .aktualnosci > a, .sklepy > a
 {
-   
+    
     color: white;
     text-decoration: none;
     text-transform: uppercase;
@@ -622,10 +625,6 @@ input[type='radio'], input[type='checkbox'] {
     {
         font-size: 30px;
     }
-    .strony
-    {
-        width: auto;
-    }
 }
 
 
@@ -644,5 +643,8 @@ input[type='radio'], input[type='checkbox'] {
         width: 160px;
         height: 190px;
     }
-
+    .strona
+    {
+        width: 450px;
+    }
 }
