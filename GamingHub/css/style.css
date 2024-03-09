@@ -650,4 +650,8 @@ input[type='radio'], input[type='checkbox'] {
         width: 160px;
         height: 190px;
     }
+    .strona
+    {
+        width: 400px;
+    }
 }
