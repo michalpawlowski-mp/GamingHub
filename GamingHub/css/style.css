@@ -643,4 +643,8 @@ input[type='radio'], input[type='checkbox'] {
         width: 160px;
         height: 190px;
     }
+	    .video-container
+    {
+        transform: rotate(90deg);
+    }
 }
