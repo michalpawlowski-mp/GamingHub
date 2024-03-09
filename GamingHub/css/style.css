@@ -100,6 +100,10 @@ h1
     text-shadow: 2px 2px 2px black;
     position: relative;
 }
+.strony
+{
+    padding: 20px;
+}
 .zakladka
 {
     height: 100%;
@@ -377,7 +381,6 @@ input[type='radio'], input[type='checkbox'] {
     flex-wrap: wrap;
     background: rgba(255, 255, 255,0.2);
     overflow: hidden;  
-    margin: 10px;
 }
 .img-strona{
     height: 100%;
@@ -392,7 +395,7 @@ input[type='radio'], input[type='checkbox'] {
 }
 .aktualnosci > a, .sklepy > a
 {
-    
+    padding: 10px;
     color: white;
     text-decoration: none;
     text-transform: uppercase;
@@ -625,6 +628,10 @@ input[type='radio'], input[type='checkbox'] {
     {
         font-size: 30px;
     }
+    .strona
+    {
+        width: 450px;
+    }
 }
 
 
@@ -642,9 +649,5 @@ input[type='radio'], input[type='checkbox'] {
     .gra {
         width: 160px;
         height: 190px;
-    }
-    .strona
-    {
-        width: 450px;
     }
 }
