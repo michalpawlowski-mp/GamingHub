@@ -16,6 +16,8 @@ html
     width: 100vw;
     margin: 0;
     padding: 0;
+	 scroll-behavior: smooth;
+  overflow-anchor: none;
 }
 body
 {
