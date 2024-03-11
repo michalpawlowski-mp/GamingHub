@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="video-container">
-      <video autoplay loop muted>
+      <video id="myVideo" autoplay loop muted>
         <source src="/video/w2.mp4" type="video/mp4" />
       </video>
       <div class="blocker"></div>
@@ -406,6 +406,20 @@
                   <label for="uzywane">używane</label>
                 </div>
               </div>
+              <div class="rodzajgry sort">
+                <div class="p-img">
+                  <p class="sortowanie-stan text-sorting">Stan Gry</p>
+                  <div class="trojkat"></div>
+                </div>
+                <div class="klucz">
+                  <input type="checkbox" name="" id="klucz" />
+                  <label for="klucz">Klucz</label>
+                </div>
+                <div class="pudelkowe">
+                  <input type="checkbox" name="" id="pudelko" />
+                  <label for="pudelkowe">Pudełkowe</label>
+                </div>
+              </div>
             </div>
           </div>
           <div class="zatwierdzanie">
@@ -596,166 +610,263 @@
             <div class="strona">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="img-strona" src="/img/strony/jarock.png" alt="" />
-              <p class="nazwa nazwa-strony">Ja,Rock!</p>
+              <div class="info">
+                <p class="nazwa nazwa-strony">Ja,Rock!</p>
+                <p class="p-info">- Nowości</p>
+                <p class="p-info">- Recenzje</p>
+                <p class="p-info">- Blog</p>
+                <p class="p-info">- Esport</p>
+              </div>
             </div>
           </a>
           <a class="strony" data-filtr="" href="https://cdaction.pl/" target="_blank" alt="cdaction">
             <div class="strona">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="img-strona" src="/img/strony/cda.png" alt="cdaction" />
-              <p class="nazwa nazwa-strony">cdaction</p>
+              <div class="info">
+                <p class="nazwa nazwa-strony">cdaction</p>
+                <p class="p-info">- Nowości</p>
+                <p class="p-info">- Recenzje</p>
+                <p class="p-info">- Technologie</p>
+                <p class="p-info">- Forum</p>
+                <p class="p-inne">i więcej</p>
+              </div>
             </div>
           </a>
           <a class="strony" data-filtr="" href="https://planetagracza.pl" target="_blank" alt="planeta gracza">
             <div class="strona">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="img-strona" src="/img/strony/planetagracza.png" alt="" />
-              <p class="nazwa nazwa-strony">Planeta Gracza</p>
+              <div class="info">
+                <p class="nazwa nazwa-strony">Planeta Gracza</p>
+                <p class="p-info">- Nowości</p>
+                <p class="p-info">- Recenzje</p>
+                <p class="p-info">- Poradniki</p>
+                <p class="p-info">- Premiery</p>
+                <p class="p-inne">i więcej</p>
+              </div>
             </div>
           </a>
           <a class="strony" data-filtr="" href="https://www.benchmark.pl/kategoria/gry.html" target="_blank" alt="benchmark">
             <div class="strona">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="img-strona" src="/img/strony/benchmark.png" alt="" />
-              <p class="nazwa nazwa-strony">benchmark</p>
+              <div class="info">
+                <p class="nazwa nazwa-strony">benchmark</p>
+                <p class="p-info">- Nowości</p>
+                <p class="p-info">- Artykuły</p>
+                <p class="p-info">- Rankingi</p>
+                <p class="p-info">- Forum</p>
+                <p class="p-inne">i więcej</p>
+              </div>
             </div>
           </a>
           <a class="strony" data-filtr="" href="https://www.ppe.pl/news.html" target="_blank" alt="ppe">
             <div class="strona">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="img-strona" src="/img/strony/ppe.png" alt="" />
-              <p class="nazwa nazwa-strony">PPE</p>
+              <div class="info">
+                <p class="nazwa nazwa-strony">PPE</p>
+                <p class="p-info">- Nowości</p>
+                <p class="p-info">- Poradniki</p>
+                <p class="p-info">- Technologie</p>
+                <p class="p-info">- Poradniki</p>
+                <p class="p-inne">i więcej</p>
+              </div>
             </div>
           </a>
           <a class="strony" data-filtr="" href="https://www.komputerswiat.pl/gamezilla" target="_blank" alt="komputer świat">
             <div class="strona">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="img-strona" src="/img/strony/komswiat.jpg" alt="" />
-              <p class="nazwa nazwa-strony">komputer swiat</p>
+              <div class="info">
+                <p class="nazwa nazwa-strony">komputer swiat</p>
+                <p class="p-info">- Aktualności</p>
+                <p class="p-info">- Artykuły</p>
+                <p class="p-info">- Recenzje</p>
+                <p class="p-info">- Poradniki</p>
+                <p class="p-info">- Poradniki</p>
+                <p class="p-inne">i więcej</p>
+              </div>
             </div>
           </a>
           <a class="strony" data-filtr="" href="https://www.gry-online.pl/newsroom/news/" target="_blank" alt="gry online">
             <div class="strona">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="img-strona" src="/img/strony/gryonline.png" alt="" />
-              <p class="nazwa nazwa-strony">gry-online</p>
+              <div class="info">
+                <p class="nazwa nazwa-strony">gry-online</p>
+                <p class="p-info">- Nowości</p>
+                <p class="p-info">- Recenzje</p>
+                <p class="p-info">- Promocje</p>
+                <p class="p-info">- Poradniki</p>
+                <p class="p-info">- Forum</p>
+                <p class="p-inne">i więcej</p>
+              </div>
             </div>
           </a>
           <a class="strony" data-filtr="" href="https://lowcygier.pl/aktualnosci/" target="_blank" alt="Łowcy gier">
             <div class="strona">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="img-strona" src="/img/strony/lowcygier.png" alt="" />
-              <p class="nazwa nazwa-strony">Łowcy gier</p>
+              <div class="info">
+                <p class="nazwa nazwa-strony">Łowcy gier</p>
+                <p class="p-info">- Aktualności</p>
+                <p class="p-info">- Recenzje</p>
+                <p class="p-info">- Forum</p>
+              </div>
             </div>
           </a>
           <a class="strony" data-filtr="" href="https://www.eurogamer.pl/news" target="_blank" alt="eurogamer">
             <div class="strona">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="img-strona" src="/img/strony/eurog.png" alt="" />
-              <p class="nazwa nazwa-strony">eurogamer</p>
+              <div class="info">
+                <p class="nazwa nazwa-strony">eurogamer</p>
+                <p class="p-info">- Nowości</p>
+                <p class="p-info">- Recenzje</p>
+                <p class="p-info">- Blog</p>
+                <p class="p-info">- Esport</p>
+                <p class="p-inne">i więcej</p>
+              </div>
             </div>
           </a>
           <a class="strony" data-filtr="" href="https://www.miastogier.pl/news.html" target="_blank" alt="miastogier">
             <div class="strona">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="img-strona" src="/img/strony/miastogier.jpg" alt="" />
-              <p class="nazwa nazwa-strony">miastogier</p>
+              <div class="info">
+                <p class="nazwa nazwa-strony">miastogier</p>
+                <p class="p-info">- Recenzje</p>
+                <p class="p-info">- Artykuły</p>
+                <p class="p-info">- Poradniki</p>
+                <p class="p-info">- Rankingi</p>
+                <p class="p-inne">i więcej</p>
+              </div>
             </div>
           </a>
           <a class="strony" data-filtr="" href="https://ithardware.pl/aktualnosci.html" target="_blank" alt="ithardware">
             <div class="strona">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="img-strona" src="/img/strony/ithardware.png" alt="" />
-              <p class="nazwa nazwa-strony">ithardware</p>
+              <div class="info">
+                <p class="nazwa nazwa-strony">ithardware</p>
+                <p class="p-info">- Aktualności</p>
+                <p class="p-info">- Poradniki</p>
+                <p class="p-info">- Forum</p>
+                <p class="p-info">- Rankingi</p>
+                <p class="p-inne">i więcej</p>
+              </div>
             </div>
           </a>
           <a class="strony" data-filtr="" href="https://polskigamedev.pl" target="_blank" alt="polskigamedev">
             <div class="strona">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="img-strona" src="/img/strony/pg.png" alt="" />
-              <p class="nazwa nazwa-strony">polskigamedev</p>
+              <div class="info">
+                <p class="nazwa nazwa-strony">polskigamedev</p>
+                <p class="p-info">- Aktualności</p>
+                <p class="p-info">- Przegląd tygodnia</p>
+                <p class="p-info">- Premiery</p>
+                <p class="p-info">- Wydarzenia</p>
+                <p class="p-inne">i więcej</p>
+              </div>
             </div>
           </a>
           <a class="strony" data-filtr="" href="https://www.gram.pl/news/gry" target="_blank" alt="gram">
             <div class="strona">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="img-strona" src="/img/strony/gram.jpg" alt="" />
-              <p class="nazwa nazwa-strony">gram</p>
+              <div class="info">
+                <p class="nazwa nazwa-strony">gram</p>
+                <p class="p-info">- Nowości</p>
+                <p class="p-info">- Recenzje</p>
+                <p class="p-info">- Forum</p>
+                <p class="p-info">- Esport</p>
+                <p class="p-inne">i więcej</p>
+              </div>
             </div>
           </a>
           <a class="strony" data-filtr="" href="https://gamingsociety.pl/gry/" target="_blank" alt="gamingsociety">
             <div class="strona">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="img-strona" src="/img/strony/gs.jpg" alt="" />
-              <p class="nazwa nazwa-strony">gamingsociety</p>
+              <div class="info">
+                <p class="nazwa nazwa-strony">gamingsociety</p>
+                <p class="p-info">- Wiadomości</p>
+                <p class="p-info">- Recenzje</p>
+                <p class="p-info">- Poradniki</p>
+                <p class="p-info">- Esport</p>
+                <p class="p-inne">i więcej</p>
+              </div>
             </div>
           </a>
         </section>
         <section class="sklepy" id="inne">
-          <a class="strony" data-filtr="nowy" href="https://www.eneba.com/pl/" target="_blank" alt="eneba">
+          <a class="strony" data-filtr="nowe online klucz" href="https://www.eneba.com/pl/" target="_blank" alt="eneba">
             <div class="strona">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="img-strona" src="/img/sklepy/eneba.png" alt="" />
               <p class="nazwa nazwa-strony">eneba</p>
             </div>
           </a>
-          <a class="strony" data-filtr="nowy" href="https://www.kinguin.net" target="_blank" alt="kinguin">
+          <a class="strony" data-filtr="nowe online klucz" href="https://www.kinguin.net" target="_blank" alt="kinguin">
             <div class="strona">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="img-strona" src="/img/sklepy/kinguin.jpg" alt="" />
               <p class="nazwa nazwa-strony">kinguin</p>
             </div>
           </a>
-          <a class="strony" data-filtr="nowy uzywane" href="https://playandgo.pl/" target="_blank" alt="play & go">
+          <a class="strony" data-filtr="nowe uzywane stacjonarne pudelko poznan szczecin" href="https://playandgo.pl/" target="_blank" alt="play & go">
             <div class="strona">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="img-strona" src="/img/sklepy/pandgo.jpg" alt="" />
               <p class="nazwa nazwa-strony">play & go</p>
             </div>
           </a>
-          <a class="strony" data-filtr="nowy" href="https://www.gamivo.com/" target="_blank" alt="gamivo">
+          <a class="strony" data-filtr="nowe klucz online" href="https://www.gamivo.com/" target="_blank" alt="gamivo">
             <div class="strona">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="img-strona" src="/img/sklepy/gamivo.jpg" alt="" />
               <p class="nazwa nazwa-strony">gamivo</p>
             </div>
           </a>
-          <a class="strony" data-filtr="nowy uzywane" href="https://www.nogame.pl/" target="_blank" alt="nogame">
+          <a class="strony" data-filtr="nowe uzywane stacjonarne Krakow " href="https://www.nogame.pl/" target="_blank" alt="nogame">
             <div class="strona">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="img-strona" src="/img/sklepy/nogame.jpg" alt="" />
               <p class="nazwa nazwa-strony">nogame</p>
             </div>
           </a>
-          <a class="strony" data-filtr="nowy" href="https://www.g2a.com/pl/" target="_blank" alt="g2a">
+          <a class="strony" data-filtr="nowe online klucz " href="https://www.g2a.com/pl/" target="_blank" alt="g2a">
             <div class="strona">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="img-strona" src="/img/sklepy/g2a.jpg" alt="" />
               <p class="nazwa nazwa-strony">g2a</p>
             </div>
           </a>
-          <a class="strony" data-filtr="nowy" href="https://pl.webuy.com/" target="_blank" alt="cex">
+          <a class="strony" data-filtr="nowe uzywane stacjonarne pudelko Czestochowa lodz szczenin poznan Olsztyn Gdynia Warszawa Bydgoszcz torun Wroclaw" href="https://pl.webuy.com/" target="_blank" alt="cex">
             <div class="strona">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="img-strona" src="/img/sklepy/cex.jpg" alt="" />
               <p class="nazwa nazwa-strony">cex</p>
             </div>
           </a>
-          <a class="strony" data-filtr="nowy uzywane" href="https://www.krakow.gameover.pl/sklep/" target="_blank" alt="gameover">
+          <a class="strony" data-filtr="nowe uzywane Krakow pudelko " href="https://www.krakow.gameover.pl/sklep/" target="_blank" alt="gameover">
             <div class="strona">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="img-strona" src="/img/sklepy/GameOver.jpg" alt="" />
               <p class="nazwa nazwa-strony">Gameover</p>
             </div>
           </a>
-          <a class="strony" data-filtr="nowy" href="https://www.humblebundle.com/" target="_blank" alt="humblebundle">
+          <a class="strony" data-filtr="nowe online klucz" href="https://www.humblebundle.com/" target="_blank" alt="humblebundle">
             <div class="strona">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="img-strona" src="/img/sklepy/humble.jpg" alt="" />
               <p class="nazwa nazwa-strony">humblebundle</p>
             </div>
           </a>
-          <a class="strony" data-filtr="nowy" href="https://gamefinity.pl/" target="_blank" alt="gamefinity">
+          <a class="strony" data-filtr="nowe pudelko stacjonarne Radom" href="https://gamefinity.pl/" target="_blank" alt="gamefinity">
             <div class="strona">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="img-strona" src="/img/sklepy/gamefinity.jpg" alt="" />
@@ -771,7 +882,7 @@
               <img class="str-gry" src="/img/strgier/opgg.png" />
             </div>
             <div class="info-str">
-              <span>OP.GG</span>
+              <p class="nazwa">OP.GG</p>
               <p>- Statystyki</p>
               <p>- Historia meczów</p>
               <p>- Buildy</p>
@@ -784,11 +895,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/mobafire.png" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://leagueoflegends.fandom.com/pl/wiki/League_of_Legends_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/fandomlol.jpg" style="background: rgb(5, 9, 43)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://www.leagueofgraphs.com/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -796,11 +923,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/lolgraphs.png" style="background: rgb(5, 9, 43)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://www.deeplol.gg/mastery" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/deeplol.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://porofessor.gg/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -808,11 +951,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/poro.png" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://mobalytics.gg/lol?int_source=homepage&int_medium=header" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/mobalytics.jpg" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://beta.riftkit.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -820,11 +979,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/lolplanner.png" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://gol.gg/esports/home/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/gglol.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>
@@ -834,11 +1009,27 @@
             <div class="logo-strony">
               <img class="str-gry" src="/img/strgier/wrg.jpg" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://mobileverso.com.br/en/wildrift/all-champions-and-builds" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/wrmobileverso.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://lolwildriftbuild.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -846,17 +1037,41 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/wrbuild.jpg" style="background: rgb(5, 9, 43)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://wr-meta.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/wrmeta.jpg" style="background: rgb(5, 9, 43)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://www.wildriftfire.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/wrfire.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>
@@ -866,11 +1081,27 @@
             <div class="logo-strony">
               <img class="str-gry" src="/img/strgier/lorccg.png" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://masteringruneterra.com/decks/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/lormastering.jpg" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://app.mobalytics.gg/lor/decks" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -878,11 +1109,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/mobalytics.jpg" style="background: rgb(5, 9, 43)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://www.runeterrafire.com/decks" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/lorfire.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://runeterra.ar/lor/decks" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -890,11 +1137,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/lorar.png" style="background: white" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://runeterra-decks.pro/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/lordeckpro.png" style="background: white" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://dak.gg/lor/?hl=en-US" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -902,11 +1165,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/lordakgg.png" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://www.leagueofgraphs.com/pl/lor/cards" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/lolgraphs.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>
@@ -916,11 +1195,27 @@
             <div class="logo-strony">
               <img class="str-gry" src="/img/strgier/lolgraphs.png" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://tftactics.gg/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/tfttactic.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://www.metatft.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -928,11 +1223,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/metatft.jpg" style="background: rgb(5, 9, 43)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://lolchess.gg/?hl=pl" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/tftchess.png" style="background: rgb(5, 9, 43)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://tracker.gg/tft" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -940,17 +1251,41 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/tracker.webp" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://tactics.tools/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/tfttools.png" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://mobalytics.gg/blog/tft/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/mobalytics.jpg" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>
@@ -960,11 +1295,27 @@
             <div class="logo-strony">
               <img class="str-gry" src="/img/strgier/dotawiki.jpg" style="background: rgb(5, 9, 43)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://dotamax.cloud/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/dotamax.jpg" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://www.opendota.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -972,11 +1323,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/dotaopen.png" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://dota2protracker.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/dota2pro.jpg" style="background: rgb(5, 9, 43)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://spectral.gg/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -984,11 +1351,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/dotaspectral.png" style="background: rgb(0, 0, 0)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://stratz.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/dotastratz.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://pl.dotabuff.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -996,11 +1379,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/dotabuff.png" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://www.datdota.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/dotadat.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>
@@ -1010,11 +1409,27 @@
             <div class="logo-strony">
               <img class="str-gry" src="/img/strgier/fandomsmite.png" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://ranked.casualsmite.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/casualsmite.jpg" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://smitesource.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1022,17 +1437,41 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/smitesource.jpg" style="background: rgb(5, 9, 43)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://www.smitefire.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/smitefire.png" style="background: rgb(5, 9, 43)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://www.smitegame.com/items/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/smite.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>
@@ -1042,11 +1481,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/rlfandom.jpg" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://rocket-league.com/items" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <img class="heart" src="/img/heartempty.png" alt="" />
             <div class="logo-strony">
               <img class="str-gry" src="/img/strgier/rlgarage.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
 
@@ -1055,11 +1510,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/rltracker.png" style="background: rgb(5, 9, 43)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://rl.exchange/pl" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/rlexchange.png" style="background: rgb(5, 9, 43)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>
@@ -1069,11 +1540,27 @@
             <div class="logo-strony">
               <img class="str-gry" src="/img/strgier/2kdb.png" style="background: rgb(5, 9, 43)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://www.2kratings.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/2krating.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>
@@ -1083,11 +1570,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/webapp.jpg" style="background: rgb(5, 9, 43)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://www.futbin.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <img class="heart" src="/img/heartempty.png" alt="" />
             <div class="logo-strony">
               <img class="str-gry" src="/img/strgier/futbin.png" style="background: rgb(76, 214, 180)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://sofifa.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1095,11 +1598,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/sofifa.png" style="background: black" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://www.futwiz.com/en/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/futwiz.png" style="background: rgb(5, 9, 43)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
 
@@ -1108,11 +1627,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/fifacm.png" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://www.futwiz.com/en/fifa23/career-mode/players" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/futwizc.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://www.fifaindex.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1120,11 +1655,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/fifaindex.png" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://fifatracker.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/fifatracker.png" style="background: black" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://new.fifasite.pl/download/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1132,11 +1683,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/fifasite.jpg" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://www.nexusmods.com/eafc24" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/NexusMods.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>
@@ -1146,11 +1713,27 @@
             <div class="logo-strony">
               <img class="str-gry" src="/img/strgier/codwiki.webp" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://callofduty.fandom.com/wiki/Call_of_Duty" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/tracker.webp" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://wzstats.gg/pl/mw3/meta" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1158,17 +1741,41 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/wzstats.png" style="background: rgb(5, 9, 43)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://warzoneloadout.games/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/wzloadout.webp" style="background: rgb(5, 9, 43)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://wzhub.gg/pl/loadouts" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/wzhub.jpg" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>
@@ -1178,11 +1785,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/tracker.webp" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://r6stats.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/r6stats.png" style="background: rgb(5, 9, 43)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://r6strat.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1190,11 +1813,27 @@
             <div class="logo-strony">
               <img class="str-gry" src="/img/strgier/r6strat.png" style="background: black" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://pl.wottactic.com/R6" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/wottatic.png" style="background: rgb(5, 9, 43)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://r6guides.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1202,12 +1841,28 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/r6guid.jpg" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
 
           <a href="https://r6analyst.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/r6analyst.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>
@@ -1217,11 +1872,27 @@
             <div class="logo-strony">
               <img class="str-gry" src="/img/strgier/csgostash.png" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://csgoskins.gg/categories/skin" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/csskins.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://counterstrike.fandom.com/wiki/Counter-Strike_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1229,11 +1900,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/cswiki.png" style="background: rgb(110, 52, 0)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://csstats.gg" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/csstats.jpg" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://tracker.gg/cs2" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1241,11 +1928,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/tracker.webp" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://scope.gg" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/csscope.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://csgo-stats.pl" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1253,17 +1956,41 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/csgostats.png" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://leetify.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/leetify.png" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://cs-sticker.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/cssticker.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
 
@@ -1272,11 +1999,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/zestart.jpg" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://pl.wottactic.com/csgo" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/wottatic.png" style="background: black" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://csgoboard.com/board/new" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1284,11 +2027,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/csgoboard.png" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://www.noesis.gg/csgo-strategy-board/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/noesis.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://sniper13.pl" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1296,11 +2055,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/sniper13.jpg" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://www.hltv.org/stats" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/hltv.webp" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>
@@ -1310,11 +2085,27 @@
             <div class="logo-strony">
               <img class="str-gry" src="/img/strgier/fortnitewiki.webp" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://fortnitetracker.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/tracker.webp" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://fortnite.gg/stats" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1322,11 +2113,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/fortnitegg.png" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://fortnitetracker.gg/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/fortnitetracker.png" style="background: #150d32" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://blitz.gg/fortnite" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1334,19 +2141,57 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/blitz.jpg" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://4nite.site/skins/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/4ntie.png" style="background: rgb(60, 78, 235)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
         </section>
         <section class="lista" id="pubg">
+          <a href="https://pubg.fandom.com/pl/wiki/PlayerUnknown%27s_Battlegrounds_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="/img/heartempty.png" alt="" />
+              <img class="str-gry" src="/img/strgier/pubgwiki.webp" style="background: rgb(255, 255, 255)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
+          </a>
           <a href="https://tracker.gg/pubg" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <img class="heart" src="/img/heartempty.png" alt="" />
             <div class="logo-strony">
               <img class="str-gry" src="/img/strgier/tracker.webp" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://pubg.op.gg/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1354,29 +2199,55 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/opggpubg.png" />
             </div>
-          </a>
-          <a href="https://pubg.op.gg/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
-            <div class="logo-strony">
-              <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/fortnitegg.png" />
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
-          <a href="https://fortnitetracker.gg/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://dak.gg/pubg" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/fortnitetracker.png" style="background: #150d32" />
+              <img class="str-gry" src="/img/strgier/dakpubg.png" style="background: rgb(131, 131, 131)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
-          <a href="https://blitz.gg/fortnite" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://pubg-stats.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/blitz.jpg" />
+              <img class="str-gry" src="/img/strgier/pubgstats.png" style="background: #ffffff" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
-          <a href="https://4nite.site/skins/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://battlegrounds.party/weapons/?weapon=K2&armor=0&helmet=0&distance=0.1&htk=ttk&pel=true&burst=false&veh=&health=100" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/4ntie.png" style="background: rgb(60, 78, 235)" />
+              <img class="str-gry" src="/img/strgier/pubgdata.jpg" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>
@@ -1386,11 +2257,27 @@
             <div class="logo-strony">
               <img class="str-gry" src="/img/strgier/valwiki.webp" style="background: rgb(19, 0, 27)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://dak.gg/valorant/en" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/valdak.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://www.strats.gg/valorant" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1398,11 +2285,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/strats.svg" style="background: rgb(255, 255, 255)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://www.thespike.gg/valorant-stats" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/thespike.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://valorantstrike.com/valorant-skins/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1410,11 +2313,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/valstrike.jpg" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://tracker.gg/valorant" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/tracker.webp" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://valorantstats.xyz/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1422,123 +2341,171 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/valstats.png" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://valorant.op.gg/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/opgg2.png" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
         </section>
         <section class="lista" id="apex">
-          <a href="https://www.op.gg" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://apexlegends.fandom.com/wiki/Apex_Legends_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <img class="heart" src="/img/heartempty.png" alt="" />
             <div class="logo-strony">
-              <img class="str-gry" src="/img/strgier/opgg.png" />
+              <img class="str-gry" src="/img/strgier/apexwiki.webp" style="background: rgb(5, 9, 43)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
-          <a href="https://www.mobafire.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://apexitemstore.com/skins/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/mobafire.png" />
+              <img class="str-gry" src="/img/strgier/apexstore.png" style="background: rgb(5, 9, 43)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
-          <a href="https://leagueoflegends.fandom.com/pl/wiki/League_of_Legends_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://www.frontierskins.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/fandomlol.jpg" style="background: rgb(5, 9, 43)" />
+              <img class="str-gry" src="/img/strgier/frontierskins.png" style="background: rgb(5, 9, 43)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
-          <a href="https://www.leagueofgraphs.com/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://apex.tracker.gg/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/lolgraphs.png" style="background: rgb(5, 9, 43)" />
+              <img class="str-gry" src="/img/strgier/tracker.webp" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
-          <a href="https://www.deeplol.gg/mastery" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://apexlegendsstatus.com/stats/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/deeplol.png" />
+              <img class="str-gry" src="/img/strgier/apexlogo.png" style="background: rgb(5, 9, 43)" />
             </div>
-          </a>
-          <a href="https://porofessor.gg/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
-            <div class="logo-strony">
-              <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/poro.png" />
-            </div>
-          </a>
-          <a href="https://mobalytics.gg/lol?int_source=homepage&int_medium=header" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
-            <div class="logo-strony">
-              <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/mobalytics.jpg" />
-            </div>
-          </a>
-          <a href="https://beta.riftkit.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
-            <div class="logo-strony">
-              <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/lolplanner.png" />
-            </div>
-          </a>
-          <a href="https://gol.gg/esports/home/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
-            <div class="logo-strony">
-              <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/gglol.png" />
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>
         <section class="lista" id="ov">
-          <a href="https://www.op.gg" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://overwatch.fandom.com/pl/wiki/Overwatch_2" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <img class="heart" src="/img/heartempty.png" alt="" />
             <div class="logo-strony">
+              <img class="str-gry" src="/img/strgier/ovwiki.webp" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
+          </a>
+          <a href="https://overwatch.op.gg/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/opgg.png" />
             </div>
-          </a>
-          <a href="https://www.mobafire.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
-            <div class="logo-strony">
-              <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/mobafire.png" />
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
-          <a href="https://leagueoflegends.fandom.com/pl/wiki/League_of_Legends_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://www.overbuff.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/fandomlol.jpg" style="background: rgb(5, 9, 43)" />
+              <img class="str-gry" src="/img/strgier/overbuff.png" style="background: rgb(5, 9, 43)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
-          <a href="https://www.leagueofgraphs.com/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://tracker.gg/overwatch" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/lolgraphs.png" style="background: rgb(5, 9, 43)" />
+              <img class="str-gry" src="/img/strgier/tracker.webp" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
-          <a href="https://www.deeplol.gg/mastery" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://fpstracker.com/overwatch-tracker/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/deeplol.png" />
+              <img class="str-gry" src="/img/strgier/fsptracker.png" style="background: rgb(5, 9, 43)" />
             </div>
-          </a>
-          <a href="https://porofessor.gg/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
-            <div class="logo-strony">
-              <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/poro.png" />
-            </div>
-          </a>
-          <a href="https://mobalytics.gg/lol?int_source=homepage&int_medium=header" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
-            <div class="logo-strony">
-              <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/mobalytics.jpg" />
-            </div>
-          </a>
-          <a href="https://beta.riftkit.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
-            <div class="logo-strony">
-              <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/lolplanner.png" />
-            </div>
-          </a>
-          <a href="https://gol.gg/esports/home/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
-            <div class="logo-strony">
-              <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/gglol.png" />
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>
@@ -1548,11 +2515,27 @@
             <div class="logo-strony">
               <img class="str-gry" src="/img/strgier/bfwiki.webp" style="background: rgb(5, 9, 43)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://companion-api.battlefield.com/companion/login" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/bfcom.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://battlefieldtracker.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1560,11 +2543,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/bftracker.jpg" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://gametools.network/stats" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/gametools.png" style="background: rgb(5, 9, 43)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>
@@ -1572,143 +2571,313 @@
           <a href="https://minecraft.fandom.com/wiki/Minecraft_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <img class="heart" src="/img/heartempty.png" alt="" />
             <div class="logo-strony">
-              <img class="str-gry" src="/img/strgier/mcwiki.webp" />
+              <img class="str-gry" src="/img/strgier/mcwiki.webp" style="background: rgb(5, 9, 43)" ++ />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://www.minecraft-crafting.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/mobafire.png" />
+              <img class="str-gry" src="/img/strgier/mccrafting.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://www.minecraftcraftingguide.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/fandomlol.jpg" style="background: rgb(5, 9, 43)" />
+              <img class="str-gry" src="/img/strgier/Crafting.webp" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://minecraft.tools/en/crafting.php" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/lolgraphs.png" style="background: rgb(5, 9, 43)" />
+              <img class="str-gry" src="/img/strgier/mctools.png  " style="background: rgb(5, 9, 43)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://www.minecraftcrafting.info" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/deeplol.png" />
+              <img class="str-gry" src="/img/strgier/mccrf.webp" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
+          </a>
+          <a href="https://www.minecraftskins.net/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="/img/heartempty.png" alt="" />
+              <img class="str-gry" src="/img/strgier/mcskins.webp" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
+          </a>
+          <a href="https://www.minecrafttexturepacks.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="/img/heartempty.png" alt="" />
+              <img class="str-gry" src="/img/strgier/mccraft.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
+          </a>
+          <a href="https://www.minecraftmods.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+            <div class="logo-strony">
+              <img class="heart" src="/img/heartempty.png" alt="" />
+              <img class="str-gry" src="/img/strgier/mcmod.png" style="background: rgb(255, 255, 255)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>
         <section class="lista" id="wot">
-          <a href="https://www.op.gg" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://worldoftanks.fandom.com/wiki/World_of_Tanks_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <img class="heart" src="/img/heartempty.png" alt="" />
             <div class="logo-strony">
-              <img class="str-gry" src="/img/strgier/opgg.png" />
+              <img class="str-gry" src="/img/strgier/wotwiki.webp" style="background: rgb(0, 0, 0)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
-          <a href="https://www.mobafire.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://tomato.gg/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/mobafire.png" />
+              <img class="str-gry" src="/img/strgier/tomato.webp" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
-          <a href="https://leagueoflegends.fandom.com/pl/wiki/League_of_Legends_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://wot-numbers.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/fandomlol.jpg" style="background: rgb(5, 9, 43)" />
+              <img class="str-gry" src="/img/strgier/wowsnumbers.ico" style="background: rgb(5, 9, 43)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
-          <a href="https://www.leagueofgraphs.com/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://skill4ltu.eu/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/lolgraphs.png" style="background: rgb(5, 9, 43)" />
+              <img class="str-gry" src="/img/strgier/skill4tu.png" style="background: rgb(0, 0, 0)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
-          <a href="https://www.deeplol.gg/mastery" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://console.worldoftanks.com/en/encyclopedia/vehicles/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/deeplol.png" />
+              <img class="str-gry" src="/img/strgier/worldoftanks.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
-          <a href="https://porofessor.gg/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://wot-life.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/poro.png" />
+              <img class="str-gry" src="/img/strgier/wotlife.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
-          <a href="https://mobalytics.gg/lol?int_source=homepage&int_medium=header" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://wottactic.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/mobalytics.jpg" />
+              <img class="str-gry" src="/img/strgier/wottatic.png" style="background: rgb(0, 0, 0)" />
             </div>
-          </a>
-          <a href="https://beta.riftkit.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
-            <div class="logo-strony">
-              <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/lolplanner.png" />
-            </div>
-          </a>
-          <a href="https://gol.gg/esports/home/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
-            <div class="logo-strony">
-              <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/gglol.png" />
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>
         <section class="lista" id="wow">
-          <a href="https://www.op.gg" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://wowwiki.fandom.com/pl/wiki/Warcraft" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <img class="heart" src="/img/heartempty.png" alt="" />
             <div class="logo-strony">
-              <img class="str-gry" src="/img/strgier/opgg.png" />
+              <img class="str-gry" src="/img/strgier/warcraftwiki.webp" style="background: rgb(0, 0, 0)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
-          <a href="https://www.mobafire.com" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://warcraft.wiki.gg/wiki/Warcraft_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/mobafire.png" />
+              <img class="str-gry" src="/img/strgier/warcraftwikigg.png" style="background: rgb(255, 255, 255)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
-          <a href="https://leagueoflegends.fandom.com/pl/wiki/League_of_Legends_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://www.wowhead.com/items" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/fandomlol.jpg" style="background: rgb(5, 9, 43)" />
+              <img class="str-gry" src="/img/strgier/wowheaddiablo.png" style="background: rgb(5, 9, 43)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
-          <a href="https://www.leagueofgraphs.com/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://classicdb.ch/?items" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/lolgraphs.png" style="background: rgb(5, 9, 43)" />
+              <img class="str-gry" src="/img/strgier/warcraftlogo1.png" style="background: rgb(5, 9, 43)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
-          <a href="https://www.deeplol.gg/mastery" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://wotlk.evowow.com/?items" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/deeplol.png" />
+              <img class="str-gry" src="/img/strgier/warcraft2.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
-          <a href="https://porofessor.gg/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://beta.wowdb.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/poro.png" />
+              <img class="str-gry" src="/img/strgier/wowdb.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
-          <a href="https://mobalytics.gg/lol?int_source=homepage&int_medium=header" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
+          <a href="https://www.top100arena.com/category/wow-private-server" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/mobalytics.jpg" />
+              <img class="str-gry" src="/img/strgier/top100.png" style="background: rgb(5, 9, 43)" />
             </div>
-          </a>
-          <a href="https://beta.riftkit.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
-            <div class="logo-strony">
-              <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/lolplanner.png" />
-            </div>
-          </a>
-          <a href="https://gol.gg/esports/home/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
-            <div class="logo-strony">
-              <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/gglol.png" />
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>
@@ -1718,11 +2887,27 @@
             <div class="logo-strony">
               <img class="str-gry" src="/img/strgier/hsreplay.png" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="http://metastats.net/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/hsmetastats.png" style="background: white" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://www.hearthstonetopdecks.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1730,11 +2915,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/hstopdeck.jpg" style="background: rgb(5, 9, 43)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://www.hearthpwn.com/decks" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/hspwn.webp" style="background: rgb(5, 9, 43)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://hearthstone-decks.net/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1742,11 +2943,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/hsdeck.png" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://tempostorm.com/hearthstone/decks" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/hstempstorm.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>
@@ -1756,53 +2973,55 @@
             <div class="logo-strony">
               <img class="str-gry" src="/img/strgier/starvelogo.webp" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://dontstarve.wiki.gg/wiki/Don%27t_Starve_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/wikiggstarve.png" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://gigglingcorpse.com/dev/dontstarvetogether/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/fandomlol.jpg" style="background: rgb(5, 9, 43)" />
+              <img class="str-gry" src="/img/strgier/fandomlol.jpg" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://dstitems.github.io/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/lolgraphs.png" style="background: rgb(5, 9, 43)" />
+              <img class="str-gry" src="/img/strgier/dstitems.webp" style="background: rgb(255, 255, 255)" />
             </div>
-          </a>
-          <a href="https://dstitems.github.io/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
-            <div class="logo-strony">
-              <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/deeplol.png" />
-            </div>
-          </a>
-          <a href="https://porofessor.gg/pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
-            <div class="logo-strony">
-              <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/poro.png" />
-            </div>
-          </a>
-          <a href="https://mobalytics.gg/lol?int_source=homepage&int_medium=header" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
-            <div class="logo-strony">
-              <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/mobalytics.jpg" />
-            </div>
-          </a>
-          <a href="https://beta.riftkit.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
-            <div class="logo-strony">
-              <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/lolplanner.png" />
-            </div>
-          </a>
-          <a href="https://gol.gg/esports/home/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
-            <div class="logo-strony">
-              <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/gglol.png" />
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>
@@ -1812,11 +3031,27 @@
             <div class="logo-strony">
               <img class="str-gry" src="/img/strgier/wowwiki.webp" style="background: rgb(5, 9, 43)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://wows-numbers.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/wowsnumbers.ico" style="background: rgb(5, 9, 43)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://www.wowsbuilds.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1824,11 +3059,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/wowsbuilds.jpg" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://mwstats.info/ships" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/mwstats.png" style="background: rgb(5, 9, 43)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>
@@ -1838,11 +3089,27 @@
             <div class="logo-strony">
               <img class="str-gry" src="/img/strgier/ARKUnity.webp" style="background: rgb(5, 9, 43)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://ark.fandom.com/wiki/ARK_Survival_Evolved_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/arkfandom.ico" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://ark.wiki.gg/wiki/ARK_Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1850,11 +3117,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/arkwikigg.png" style="background: rgb(5, 9, 43)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://arkcheat.com/item-ids" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/arkids.png" style="background: rgb(5, 9, 43)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://arkcheat.com/item-ids" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1862,11 +3145,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/deeplol.png" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://arkcheat.com/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/arkcheat.webp" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>
@@ -1876,11 +3175,27 @@
             <div class="logo-strony">
               <img class="str-gry" src="/img/strgier/gtawiki.webp" style="background: rgb(0, 0, 0)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://www.gtabase.com/grand-theft-auto-v" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/gtabase.jpg" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://wiki.rage.mp/index.php?title=Vehicles" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1888,11 +3203,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/gtarage.ico" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://gtacars.net" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/gtacars.png" style="background: rgb(0, 0, 0)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://pl.gta5-mods.com/vehicles" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1900,11 +3231,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/gta5mod.webp" style="background: #20ba4e" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://socialclub.rockstargames.com/games/gtav/index-signin?ageGate=True" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/rockstar.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>
@@ -1914,11 +3261,27 @@
             <div class="logo-strony">
               <img class="str-gry" src="/img/strgier/diablofandom.png" style="background: rgb(0, 0, 0)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://d4builds.gg/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/d4builds.svg" style="background: rgb(0, 0, 0)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://diablotrade.gg/?cursor=" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1926,11 +3289,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/diablotrade.jpg" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://www.wowhead.com/diablo-4" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/wowheaddiablo.png" style="background: rgb(5, 9, 43)" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://diablo4.wiki.fextralife.com/Diablo+4+Wiki" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1938,17 +3317,41 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/fextralifediablo.jpg" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://mapgenie.io/diablo-4/maps/sanctuary" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/mapgeniediablo.webp" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://diablo4.cc/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/diablo4cc.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>
@@ -1958,17 +3361,41 @@
             <div class="logo-strony">
               <img class="str-gry" src="/img/strgier/metin2wiki.png" style="background: white" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://serwerymetin2.pl/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/mt2priv.jpg" />
+              <img class="str-gry" src="/img/strgier/metin2.png" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://www.metin2.priv.pl/servers" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
-              <img class="str-gry" src="/img/strgier/metin2.png" />
+              <img class="str-gry" src="/img/strgier/mt2priv.jpg" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://metin2pserver.net/Ranking.pl" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1976,11 +3403,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/metin2server.jpg" style="background: rgb(5, 9, 43)" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="https://m2icondb.com/  " class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/m2icondb.jpeg" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
           <a href="https://metin2cms.cf/items/" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
@@ -1988,11 +3431,27 @@
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/metin2cms.png" style="background: black" />
             </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
+            </div>
           </a>
           <a href="http://wiki.imetin.pl/index.php?title=Strona_g%C5%82%C3%B3wna" class="strona-gry" id="lol" target="_blank" alt="leagueoflegends">
             <div class="logo-strony">
               <img class="heart" src="/img/heartempty.png" alt="" />
               <img class="str-gry" src="/img/strgier/imetin2.png" style="background: black" />
+            </div>
+            <div class="info-str">
+              <p class="nazwa">OP.GG</p>
+              <p>- Statystyki</p>
+              <p>- Historia meczów</p>
+              <p>- Buildy</p>
+              <p>- Runy</p>
+              <p>- Tier Listy</p>
             </div>
           </a>
         </section>

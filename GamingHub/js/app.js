@@ -49,45 +49,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
 let links = document.querySelectorAll('a');
 
 links.forEach(function(link) {
-  link.addEventListener('click', function() {
+  link.addEventListener('click', function(event) {
 
     let sectionId = this.getAttribute('href').substring(1);
 
-    let section = document.querySelector('#' + sectionId + '.lista');
+    let section = document.querySelector('#' + sectionId);
 
-    if (section) {
-      let allSections = document.querySelectorAll('section');
-      allSections.forEach(function(sec) {
-        sec.style.display = 'none';
-      });
+    let allSections = document.querySelectorAll('section');
+    allSections.forEach(function(sec) {
+      sec.style.display = 'none';
+    });
 
-      section.style.display = 'flex';
-
-      let divSortGry = document.querySelector('#sortowanieGry');
-      let divSortAkt = document.querySelector('#sortowanieAkt');
-      let divSortInne = document.querySelector('#sortowanieInne');
-      let confirm = document.querySelector('#confirm');
-      let zatwierdzenie = document.querySelector('.zatwierdzenie');
-      let panel = document.querySelector('.panel');
-      let sort = document.querySelector('.sort');
-      let wyszukiwanie = document.querySelector('.wyszukiwanie');
-
-      if (divSortGry) divSortGry.style.display = 'none';
-      if (divSortAkt) divSortAkt.style.display = 'none';
-      if (divSortInne) divSortInne.style.display = 'none';
-      if (confirm) confirm.style.display = 'none';
-      if (zatwierdzenie) zatwierdzenie.style.height = '0%';
-      if (panel) panel.style.display = 'auto';
-      if (sort) sort.style.height = '55%';
-      if (wyszukiwanie) wyszukiwanie.style.height = '66px';
-    }
-
+    section.style.display = 'flex';
   });
 });
 });
+
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -277,7 +258,7 @@ function sortDivs(section) {
     } else if (imgA.includes('heartempty') && imgB.includes('heartred')) {
       return 1;
     } else {
-      return container.originalOrder.indexOf(a) - container.originalOrder.indexOf(b);
+      return 0;
     }
   });
 
@@ -285,6 +266,8 @@ function sortDivs(section) {
     container.appendChild(link);
   });
 }
+
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -294,32 +277,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const removeFavoritesButton = document.querySelector('#usunulubione');
   const sections = Array.from(document.querySelectorAll('section'));
 
-  // Sprawdź, czy są jakiekolwiek ulubione elementy po załadowaniu strony
-  const anyHeartIsRed = Array.from(document.querySelectorAll('.heart')).some((heart) => heart.src.includes('heartred'));
-  if (anyHeartIsRed) {
-    removeFavoritesButton.style.display = 'block';
-  } else {
-    removeFavoritesButton.style.display = 'none';
-  }
+  const updateButtonDisplay = () => {
+    const anyHeartIsRed = Array.from(document.querySelectorAll('.heart')).some((heart) => heart.src.includes('heartred'));
+    removeFavoritesButton.style.display = anyHeartIsRed ? 'block' : 'none';
+  };
+
+  updateButtonDisplay();
 
   sections.forEach((section) => {
     const hearts = Array.from(section.querySelectorAll('.heart'));
 
     hearts.forEach((heart) => {
-      // Obserwuj zmiany atrybutu src serca
-      const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-          if (mutation.type === 'attributes' && mutation.attributeName === 'src') {
-            const anyHeartIsRed = Array.from(document.querySelectorAll('.heart')).some((heart) => heart.src.includes('heartred'));
-
-            if (anyHeartIsRed) {
-              removeFavoritesButton.style.display = 'block';
-            } else {
-              removeFavoritesButton.style.display = 'none';
-              sortDivs(section);
-            }
-          }
-        });
+      const observer = new MutationObserver(() => {
+        updateButtonDisplay();
+        if (!Array.from(document.querySelectorAll('.heart')).some((heart) => heart.src.includes('heartred'))) {
+          sortDivs(section);
+        }
       });
 
       observer.observe(heart, {
@@ -339,13 +312,10 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    const anyHeartIsRed = Array.from(document.querySelectorAll('.heart')).some((heart) => heart.src.includes('heartred'));
-
-    if (!anyHeartIsRed) {
-      removeFavoritesButton.style.display = 'none';
-    }
+    updateButtonDisplay();
   });
 });
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -354,29 +324,18 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
   const azRadio = document.querySelector('#az');
   const zaRadio = document.querySelector('#za');
-  const removeSortButton = document.querySelector('#usunalfabetyczne');
   const sections = Array.from(document.querySelectorAll('section'));
-  let originalOrder = sections.map(section => Array.from(section.children));
 
   azRadio.addEventListener('change', () => {
     if (azRadio.checked) {
       sortElementsAlphabetically(true);
-      removeSortButton.style.display = 'block';
     }
   });
 
   zaRadio.addEventListener('change', () => {
     if (zaRadio.checked) {
       sortElementsAlphabetically(false);
-      removeSortButton.style.display = 'block';
     }
-  });
-
-  removeSortButton.addEventListener('click', () => {
-    removeSortButton.style.display = 'none';
-    removeAlphabeticalSorting();
-    azRadio.checked = false;
-    zaRadio.checked = false;
   });
 
   function sortElementsAlphabetically(ascending) {
@@ -398,6 +357,32 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+});
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+document.addEventListener('DOMContentLoaded', () => {
+  const removeSortButton = document.querySelector('#usunalfabetyczne');
+  const azRadio = document.querySelector('#az');
+  const zaRadio = document.querySelector('#za');
+  const sections = Array.from(document.querySelectorAll('section'));
+  let originalOrder = sections.map(section => Array.from(section.children));
+
+  const radios = [azRadio, zaRadio];
+  radios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      if (radio.checked) {
+        removeSortButton.style.display = 'block';
+      }
+    });
+  });
+  removeSortButton.addEventListener('click', () => {
+    removeAlphabeticalSorting();
+    radios.forEach(radio => radio.checked = false);
+    removeSortButton.style.display = 'none';
+  });
 
   function removeAlphabeticalSorting() {
     sections.forEach((section, index) => {
@@ -410,6 +395,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+
+
+
+
+
+
 
 
 
@@ -557,33 +549,11 @@ function updateArrowStyle() {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Dodaj nasłuchiwacz zdarzeń do linków
-document.querySelectorAll('a').forEach(function(link) {
-  link.addEventListener('click', function(event) {
-    // Dodaj nowy wpis do historii przeglądarki
-    history.pushState({section: event.target.getAttribute('href')}, '');
-    console.log('Link clicked: ' + event.target.getAttribute('href')); // Dodaj console.log
-  });
-});
 
-// Dodaj nasłuchiwacz zdarzeń do okna
-window.addEventListener('popstate', function(event) {
-  if (event.state) {
-    // Znajdź link z odpowiednim atrybutem href
-    let link = document.querySelector(`a[href="${event.state.section}"]`);
-    if (link) {
-      // Symuluj kliknięcie linku
-      link.click();
-      console.log('Popstate event: ' + event.state.section); // Dodaj console.log
-    }
-  }
-});
+
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-document.querySelector('video').addEventListener('click', function(event) {
-  event.preventDefault();
-});
