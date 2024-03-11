@@ -399,6 +399,7 @@ input[type='radio'], input[type='checkbox'] {
     right: 0;
     display: block;
     width: 55%;
+    height: 85%;
 }
 .info > .nazwa
 {
