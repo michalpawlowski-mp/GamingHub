@@ -657,8 +657,9 @@ input[type='radio'], input[type='checkbox'] {
         margin-top: 20px;
     }
     .gra {
-        width: 160px;
-        height: 190px;
+    margin: 5px;
+    width: 175px;
+    height: 200px;
     }
     .strona
     {
