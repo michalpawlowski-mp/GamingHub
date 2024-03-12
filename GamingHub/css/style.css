@@ -398,7 +398,7 @@ input[type='radio'], input[type='checkbox'] {
     position: absolute;
     right: 0;
     display: block;
-    width: 50%;
+    width: 55%;
     height: 85%;
 }
 .info > .nazwa
@@ -524,7 +524,9 @@ margin: auto;
 .info-str > .nazwa
 {
     
-    font-size: 170%;
+    font-size: 100%;
+    font-weight: 600;
+    font-family:  'Helvetica Neue', sans-serif;
 }
 .lista
 {
@@ -700,5 +702,8 @@ margin: auto;
     width: 175px;
     height: 200px;
     }
-
+    .info
+    {
+        width: 55%;
+    }
 }
