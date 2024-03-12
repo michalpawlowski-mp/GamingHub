@@ -717,7 +717,7 @@ margin: auto;
     }
     .info
     {
-        width: 55%;
+        width: 50%;
     }
         .pg-inne
     {
@@ -731,7 +731,7 @@ margin: auto;
         font-size: 12px;
     }
     .buttonsort {
-        font-size: 12px;
+        font-size: 10px;
     }
 }
 
