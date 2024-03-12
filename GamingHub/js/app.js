@@ -53,15 +53,16 @@ document.addEventListener('DOMContentLoaded', function() {
 let links = document.querySelectorAll('a');
 
 links.forEach(function(link) {
-  link.addEventListener('click', function(event) {
+  link.addEventListener('click', function() {
 
     let sectionId = this.getAttribute('href').substring(1);
 
-    let section = document.querySelector('#' + sectionId);
+    let section = document.querySelector('#' + sectionId );
 
     let allSections = document.querySelectorAll('section');
     allSections.forEach(function(sec) {
       sec.style.display = 'none';
+      
     });
 
     section.style.display = 'flex';
@@ -258,7 +259,8 @@ function sortDivs(section) {
     } else if (imgA.includes('heartempty') && imgB.includes('heartred')) {
       return 1;
     } else {
-      return 0;
+      // Użyj oryginalnego porządku jako kryterium sortowania, gdy stany serc są takie same
+      return container.originalOrder.indexOf(a) - container.originalOrder.indexOf(b);
     }
   });
 
@@ -269,10 +271,12 @@ function sortDivs(section) {
 
 
 
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+/*
 document.addEventListener('DOMContentLoaded', () => {
   const removeFavoritesButton = document.querySelector('#usunulubione');
   const sections = Array.from(document.querySelectorAll('section'));
@@ -313,6 +317,102 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     updateButtonDisplay();
+  });
+});*/
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const removeFavoritesButton = document.querySelector('#usunulubione');
+  const removeSortButton = document.querySelector('#usunalfabetyczne');
+  const azRadio = document.querySelector('#az');
+  const zaRadio = document.querySelector('#za');
+  const sections = Array.from(document.querySelectorAll('section'));
+  let originalOrder = sections.map(section => Array.from(section.children));
+
+  const updateButtonDisplay = () => {
+    const anyHeartIsRed = Array.from(document.querySelectorAll('.heart')).some((heart) => heart.src.includes('heartred'));
+    removeFavoritesButton.style.display = anyHeartIsRed ? 'block' : 'none';
+  };
+
+  updateButtonDisplay();
+
+  sections.forEach((section) => {
+    const hearts = Array.from(section.querySelectorAll('.heart'));
+
+    hearts.forEach((heart) => {
+      const observer = new MutationObserver(() => {
+        updateButtonDisplay();
+        if (!Array.from(document.querySelectorAll('.heart')).some((heart) => heart.src.includes('heartred'))) {
+          sortDivs(section);
+        }
+      });
+
+      observer.observe(heart, {
+        attributes: true 
+      });
+    });
+  });
+
+  removeFavoritesButton.addEventListener('click', () => {
+    sections.forEach((section, sectionIndex) => {
+      const hearts = Array.from(section.querySelectorAll('.heart'));
+      hearts.forEach((heart, heartIndex) => {
+        const localStorageKey = 'heart' + (sectionIndex * sections.length + heartIndex);
+
+        heart.src = '../img/heartempty.png';
+        localStorage.setItem(localStorageKey, 'empty');
+      });
+    });
+
+    updateButtonDisplay();
+  });
+
+  const radios = [azRadio, zaRadio];
+  radios.forEach(radio => {
+    radio.addEventListener('change', () => {
+      if (radio.checked) {
+        removeSortButton.style.display = 'block';
+      }
+    });
+  });
+  removeSortButton.addEventListener('click', () => {
+    removeAlphabeticalSorting();
+    radios.forEach(radio => radio.checked = false);
+    removeSortButton.style.display = 'none';
+  });
+
+  function removeAlphabeticalSorting() {
+    sections.forEach((section, index) => {
+      while (section.firstChild) {
+        section.removeChild(section.firstChild);
+      }
+      originalOrder[index].forEach((element) => {
+        section.appendChild(element);
+      });
+    });
+  }
+
+  function removeFilters() {
+    let inputs = document.querySelectorAll(".filtrowanie input:checked");
+    inputs.forEach(function(input) {
+      input.checked = false;
+    });
+    let removeFiltersButton = document.getElementById("usunfiltry");
+    removeFiltersButton.style.display = "none";
+    // Wywołujemy zdarzenie kliknięcia na przycisku potwierdzenia
+    let confirmButton = document.getElementById("confirm");
+    confirmButton.click();
+  }
+
+  let removeFiltersButton = document.getElementById("usunfiltry");
+  removeFiltersButton.addEventListener("click", removeFilters);
+
+  let confirmButton = document.getElementById("confirm");
+  confirmButton.addEventListener("click", function() {
+    let inputs = document.querySelectorAll(".filtrowanie input:checked");
+    if (inputs.length > 0) {
+      removeFiltersButton.style.display = "block";
+    }
   });
 });
 
@@ -363,6 +463,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+/*
 document.addEventListener('DOMContentLoaded', () => {
   const removeSortButton = document.querySelector('#usunalfabetyczne');
   const azRadio = document.querySelector('#az');
@@ -394,11 +495,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-});
-
-
-
-
+});*/
 
 
 
@@ -418,8 +515,6 @@ document.addEventListener("DOMContentLoaded", function() {
       return input.id; 
     });
 
-    let removeFiltersButton = document.getElementById("usunfiltry");
-        
     if (filters.length > 0) {
       results.forEach(function (result) {
         let match = true;
@@ -434,29 +529,49 @@ document.addEventListener("DOMContentLoaded", function() {
           result.style.display = "none";
         }
       });
-      removeFiltersButton.style.display = "block";
     } else {
       results.forEach(function (result) {
         result.style.display = "block";
       });
-      removeFiltersButton.style.display = "none";
     }
   }
 
+  let confirmButton = document.getElementById("confirm");
+  confirmButton.addEventListener("click", filter);
+});
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*
+document.addEventListener("DOMContentLoaded", function() {
+  
   function removeFilters() {
     let inputs = document.querySelectorAll(".filtrowanie input:checked");
     inputs.forEach(function(input) {
       input.checked = false;
     });
-    filter();
+    let removeFiltersButton = document.getElementById("usunfiltry");
+    removeFiltersButton.style.display = "none";
+    // Wywołujemy zdarzenie kliknięcia na przycisku potwierdzenia
+    let confirmButton = document.getElementById("confirm");
+    confirmButton.click();
   }
 
-  let confirmButton = document.getElementById("confirm");
   let removeFiltersButton = document.getElementById("usunfiltry");
-
-  confirmButton.addEventListener("click", filter);
   removeFiltersButton.addEventListener("click", removeFilters);
-});
+
+  let confirmButton = document.getElementById("confirm");
+  confirmButton.addEventListener("click", function() {
+    let inputs = document.querySelectorAll(".filtrowanie input:checked");
+    if (inputs.length > 0) {
+      removeFiltersButton.style.display = "block";
+    }
+  });
+});*/
 
 
 

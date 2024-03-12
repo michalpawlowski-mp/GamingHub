@@ -528,6 +528,10 @@ margin: auto;
     font-weight: 600;
     font-family:  'Helvetica Neue', sans-serif;
 }
+.info-str:last-child
+{
+      border: none;
+}
 .lista
 {
     display: none;
@@ -560,6 +564,7 @@ margin: auto;
     background: rgba(255, 255, 255, 0.2);
 
 }
+
 .buttonsort b {
     margin-right: 10px;
     color: red;
@@ -616,6 +621,13 @@ margin: auto;
     {
         margin-top: 25px;
     }
+.pg-inne
+{
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    border: 0px;
+}
 
 
 @media (max-width: 1315px)  {
@@ -625,54 +637,53 @@ margin: auto;
     .filtr, .zakladka {
         width: 100%;
     }
-    .lupa
-    {
+    .lupa{
         width: 3%;
     }
-    .wyszukiwanie > .trojkat
-    {
+    .wyszukiwanie > .trojkat{
         display: flex;
         margin-right: 10px;
     }
-    .zatwierdzanie
-    {
+    .zatwierdzanie{
         height: 15%;
-    }
-    .panel
-    {
-        height: 85%;
-        box-shadow: none;
     }
     .gra {
         width: 200px;
         height: 245px;
     }
-    .nazwa-gry
-    {
+    .nazwa-gry{
         font-size: 105%;
         font-weight: 600;
     }
-    nav > a
-    {
+    nav > a {
         font-size: 95%;
         margin: 5px;
     }
-    .sort
-    {
+    .sort {
         padding: 5px;
     }
-    .rozwijanie
-    {
+    .rozwijanie {
         height: 1%;
         width: 100%;
     }
-    h1
-    {
+    h1 {
         font-size: 30px;
     }
-    .strona
-    {
+    .strona {
         width: 450px;
+    }
+    .text-sorting {
+        font-size: 17px;
+    }
+    .panel {
+        font-size: 15px;
+    }
+    .filtry {
+        flex-direction: row;
+      }
+    .buttonsort {
+        width: auto;
+        margin: auto;
     }
 }
 
@@ -684,9 +695,11 @@ margin: auto;
         font-size: 75%;
         margin: 5px;
     }
+    .strony:first-child {
+        margin-top: 20px;
+    }
     .strony {
         width: auto;
-        margin-top: 20px;
     }
     .gra {
         width: 160px;
@@ -704,6 +717,25 @@ margin: auto;
     }
     .info
     {
-        width: 50%;
+        width: 55%;
+    }
+        .pg-inne
+    {
+        bottom: -2px;
+    }
+    .text-sorting {
+        font-size: 15px;
+    }
+    .panel
+    {
+        font-size: 12px;
     }
 }
+
+
+
+
+
+
+
+
