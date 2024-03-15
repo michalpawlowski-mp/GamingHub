@@ -219,7 +219,7 @@ nav > a:hover
 
 
 #confirm {
-    color: white;;
+    color: white;
     width: 100%;
     height: 100%;
     border: none;
@@ -228,14 +228,15 @@ nav > a:hover
     background: rgb(61, 61, 61);
     transition: background 0.3s ease-in-out;
 }
-#confirm:active {
-    background: rgb(17, 17, 17);
-    transition: transform 0.1s;
-}
-#confirm:hover
-{
+
+#confirm:hover {
     background: rgba(63, 63, 63, 0.2);
 }
+#confirm:active {
+    background: rgb(17, 17, 17);
+    transition: background 0.1s;
+}
+
 .gra {
     margin: 15px;
     border-radius: 10px;
@@ -378,6 +379,18 @@ input[type='radio'], input[type='checkbox'] {
     height: 8%;
     width: 100%;
 }
+#text
+{
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 100px;
+}
+
 .strona
 {
     border: 2px solid rgb(255, 255, 255);
@@ -442,7 +455,7 @@ margin: auto;
     text-transform: uppercase;
     font-family: 'Bebas Neue', sans-serif;
 }
-.sklepy, .aktualnosci , #sortowanieAkt, #sortowanieInne{
+.sklepy, .aktualnosci , #sortowanieAkt, #sortowanieInne,#sortowanieStrony{
     display: none;
 }
 .gry {
@@ -554,7 +567,7 @@ margin: auto;
     font-size: 15px;
     width: 100%;
     height: 100%;
-    padding: 10px 0 5px 10px;
+    padding: 10px;
     text-align: left;
     display: none;
     justify-content: space-between;
@@ -652,11 +665,11 @@ margin: auto;
         height: 245px;
     }
     .nazwa-gry{
-        font-size: 105%;
+        font-size: 100%;
         font-weight: 600;
     }
     nav > a {
-        font-size: 95%;
+        font-size: 85%;
         margin: 5px;
     }
     .sort {
@@ -689,9 +702,7 @@ margin: auto;
 
 
 @media (max-width: 700px) {
-
-    nav > a
-    {
+    nav > a {
         font-size: 75%;
         margin: 5px;
     }
@@ -705,22 +716,18 @@ margin: auto;
         width: 160px;
         height: 190px;
     }
-    .strona
-    {
+    .strona {
         width: 380px;
     }
-    .strona-gry
-    {
+    .strona-gry{
     margin: 5px;
     width: 175px;
     height: 200px;
     }
-    .info
-    {
+    .info {
         width: 50%;
     }
-        .pg-inne
-    {
+    .pg-inne {
         bottom: -2px;
     }
     .text-sorting {
@@ -731,9 +738,10 @@ margin: auto;
         font-size: 12px;
     }
     .buttonsort {
-        font-size: 10px;
+        font-size: 12px;
     }
 }
+
 
 
 

@@ -1,74 +1,57 @@
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
   
-  let linkGry = document.querySelector('a[href="#gry"]');
-  let linkAktualnosci = document.querySelector('a[href="#aktualnosci"]');
-  let linkSklepy = document.querySelector('a[href="#inne"]');
-
   let sekcjaGry = document.querySelector('.gry');
   let sekcjaAktualnosci = document.querySelector('.aktualnosci');
   let sekcjaSklepy = document.querySelector('.sklepy');
-
   let divSortGry = document.querySelector('#sortowanieGry');
   let divSortAkt = document.querySelector('#sortowanieAkt');
   let divSortInne = document.querySelector('#sortowanieInne');
+  let divSortStr = document.querySelector('#sortowanieStrony');
+  let links = document.querySelectorAll('a');
 
-  linkGry.addEventListener('click', function() {
-    sekcjaGry.style.display = 'flex';
-    sekcjaAktualnosci.style.display = 'none';
-    sekcjaSklepy.style.display = 'none';
-    divSortAkt.style.display = 'none';
-    divSortGry.style.display = 'block';
-    divSortInne.style.display = 'none';
-  });
+  links.forEach(function(link) {
+    link.addEventListener('click', function(e) {
 
-  linkAktualnosci.addEventListener('click', function() {
-    sekcjaGry.style.display = 'none';
-    sekcjaAktualnosci.style.display = 'flex';
-    sekcjaSklepy.style.display = 'none';
-    divSortAkt.style.display = 'block';
-    divSortGry.style.display = 'none';
-    divSortInne.style.display = 'none';
-  });
+      let sectionId = this.getAttribute('href').substring(1);
 
-  linkSklepy.addEventListener('click', function() {
-    sekcjaGry.style.display = 'none';
-    sekcjaAktualnosci.style.display = 'none';
-    sekcjaSklepy.style.display = 'flex';
-    divSortAkt.style.display = 'none';
-    divSortGry.style.display = 'none';
-    divSortInne.style.display = 'block';
-  });
+      if (this.getAttribute('href').startsWith('http')) {
+        e.preventDefault();
+        window.open(this.getAttribute('href'));
+        return;
+      }
 
+      let allSections = document.querySelectorAll('section');
+      allSections.forEach(function(sec) {
+        sec.style.display = 'none';
+      });
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      divSortGry.style.display = 'none';
+      divSortAkt.style.display = 'none';
+      divSortInne.style.display = 'none';
+      divSortStr.style.display = 'none';
 
-
-
-
-let links = document.querySelectorAll('a');
-
-links.forEach(function(link) {
-  link.addEventListener('click', function() {
-
-    let sectionId = this.getAttribute('href').substring(1);
-
-    let section = document.querySelector('#' + sectionId );
-
-    let allSections = document.querySelectorAll('section');
-    allSections.forEach(function(sec) {
-      sec.style.display = 'none';
-      
+      if (sectionId === 'gry') {
+        sekcjaGry.style.display = 'flex';
+        divSortGry.style.display = 'block';
+      } else if (sectionId === 'aktualnosci') {
+        sekcjaAktualnosci.style.display = 'flex';
+        divSortAkt.style.display = 'block';
+      } else if (sectionId === 'inne') {
+        sekcjaSklepy.style.display = 'flex';
+        divSortInne.style.display = 'block';
+      } else {
+        let section = document.querySelector('#' + sectionId + '.lista');
+        if (section) {
+          section.style.display = 'flex';
+          divSortStr.style.display = 'block';
+        }
+      }
     });
-
-    section.style.display = 'flex';
   });
 });
-});
+
+
 
 
 
@@ -157,40 +140,37 @@ window.addEventListener('resize', () => {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-// Pobierz pole wyszukiwania
+
+
 let searchInput = document.querySelector('#search');
 
-// Dodaj zdarzenie 'input' do pola wyszukiwania
 searchInput.addEventListener('input', function() {
-  // Pobierz wprowadzoną frazę
+
   let phrase = removeDiacritics(this.value.toLowerCase());
 
-  // Wybierz sekcje do przeszukania
-  let sections = ['gry', 'aktualnosci', 'inne'];
+  let sections = ['.gry', '.aktualnosci', '.sklepy', '.lista'];
 
-  // Przeszukaj każdą sekcję
-  sections.forEach(function(sectionId) {
-    let section = document.querySelector('#' + sectionId);
+  sections.forEach(function(sectionClass) {
+    let sectionElements = document.querySelectorAll(sectionClass);
 
-    // Wyszukaj elementy div lub a zawierające element p o klasie 'nazwa'
-    let parentElements = section.querySelectorAll('div:has(p.nazwa), a:has(p.nazwa)');
+    sectionElements.forEach(function(section) {
+      let parentElements = section.querySelectorAll('div:has(p.nazwa), a:has(p.nazwa)');
 
-    // Przejdź przez każdy element div lub a
-    parentElements.forEach(function(parent) {
-      // Sprawdź, czy tekst elementu p zawiera wprowadzoną frazę
-      let p = parent.querySelector('p.nazwa');
-      if (removeDiacritics(p.textContent.toLowerCase()).includes(phrase)) {
-        // Jeżeli tak, wyświetl element div lub a
-        parent.style.display = '';
-        parent.style.position = 'relative';
-      } else {
-        // Jeżeli nie, ukryj element div lub a
-        parent.style.display = 'none';
-      }
+      parentElements.forEach(function(parent) {
+
+        let p = parent.querySelector('p.nazwa');
+        if (removeDiacritics(p.textContent.toLowerCase()).includes(phrase)) {
+
+          parent.style.display = '';
+        } else {
+
+          parent.style.display = 'none';
+        }
+      });
     });
   });
 });
-// Wyszukiwanie
+
 function removeDiacritics(str) {
   let diacritics = [
     [/ą/g, 'a'], [/ć/g, 'c'], [/ę/g, 'e'], [/ł/g, 'l'], [/ń/g, 'n'], [/ó/g, 'o'], [/ś/g, 's'], [/ź/g, 'z'], [/ż/g, 'z'],
@@ -203,6 +183,9 @@ function removeDiacritics(str) {
 }
 
 
+
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -212,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const sections = Array.from(document.querySelectorAll('section'));
 
   sections.forEach((section, sectionIndex) => {
-    const hearts = Array.from(section.querySelectorAll('.heart'));
+    const hearts = Array.from(section.querySelectorAll('.heart'));-+
 
     hearts.forEach((heart, heartIndex) => {
       const localStorageKey = 'heart' + (sectionIndex * sections.length + heartIndex);
@@ -440,7 +423,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function sortElementsAlphabetically(ascending) {
     sections.forEach((section) => {
-      const elements = Array.from(section.querySelectorAll('a.gra, a.strony'));
+      const elements = Array.from(section.querySelectorAll('a.gra, a.strony, a.strona-gry'));
 
       elements.sort((a, b) => {
         const aText = a.querySelector('p.nazwa').textContent.trim().toLowerCase();
@@ -579,50 +562,39 @@ document.addEventListener("DOMContentLoaded", function() {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Znajdź elementy .arrow, .filtr, .zakladka, .arrow1 i .arrow2
+
 let arrow = document.querySelector('.arrow');
 let filtr = document.querySelector('.filtr');
 let zakladka = document.querySelector('.zakladka');
 let arrow1 = document.querySelector('.arrow1');
 let arrow2 = document.querySelector('.arrow2');
-
 let arrowClicked = false;
 
-// Dodaj nasłuchiwacz zdarzeń kliknięcia do elementu .arrow
 arrow.addEventListener('click', function() {
   arrowClicked = !arrowClicked;
   
   if (arrowClicked) {
-    // Zmień style dla .filtr i .zakladka
-    filtr.style.display = 'none'; // Zmień display na 'none'
-    zakladka.style.display = 'flex'; // Zmień display na 'flex'
-    zakladka.style.width = '100%'; // Zmień width na '100%'
-    zakladka.style.height = '100%'; // Zmień height na '100%'
-    // Zmień style dla .arrow
+    filtr.style.display = 'none'; 
+    zakladka.style.display = 'flex'; 
+    zakladka.style.width = '100%'; 
+    zakladka.style.height = '100%'; 
     updateArrowStyle();
-    // Dodaj klasę 'clicked' do .arrow1 i .arrow2
     arrow1.classList.add('clicked');
     arrow2.classList.add('clicked');
   } else {
-    // Przywróć pierwotne style dla .filtr i .zakladka
-    filtr.style.display = ''; // Zastąp pustym ciągiem, aby przywrócić domyślny styl
-    zakladka.style.display = ''; // Zastąp pustym ciągiem, aby przywrócić domyślny styl
-    zakladka.style.width = ''; // Zastąp pustym ciągiem, aby przywrócić domyślny styl
-    zakladka.style.height = ''; // Zastąp pustym ciągiem, aby przywrócić domyślny styl
-    // Usuń klasę 'clicked' z .arrow1 i .arrow2
+    filtr.style.display = ''; 
+    zakladka.style.display = ''; 
+    zakladka.style.width = '';
+    zakladka.style.height = ''; 
     arrow1.classList.remove('clicked');
     arrow2.classList.remove('clicked');
-    // Przywróć pierwotne style dla .arrow
     updateArrowStyle();
   }
 });
 
-// Dodaj nasłuchiwacz zdarzeń DOMContentLoaded do dokumentu
 document.addEventListener('DOMContentLoaded', function() {
-  // Zmień style dla .arrow
   updateArrowStyle();
   
-  // Zmień style dla .filtr i .zakladka
   if (arrowClicked) {
     filtr.style.display = 'none';
     zakladka.style.display = 'flex';
@@ -636,16 +608,11 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// Dodaj nasłuchiwacz zdarzeń resize do okna
 window.addEventListener('resize', function() {
-  // Aktualizuj style dla .arrow
   updateArrowStyle();
 });
-
-// Ustaw .zakladka na position: relative;
 zakladka.style.position = 'relative';
 
-// Funkcja do aktualizacji stylu .arrow
 function updateArrowStyle() {
   if (window.innerWidth <= 1315) {
     arrow.style.position = 'absolute';
@@ -659,6 +626,8 @@ function updateArrowStyle() {
     arrow.style.transform = 'translateY(-50%)';
   }
 }
+
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
