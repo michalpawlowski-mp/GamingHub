@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const localStorageKey = 'heart' + (sectionIndex * sections.length + heartIndex);
 
       if (localStorage.getItem(localStorageKey) === 'red') {
-        heart.src = '/img/heartred.png';
+        heart.src = './img/heartred.png';
       } else {
         heart.src = './img/heartempty.png';
       }
@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
         event.stopPropagation(); 
 
         if (heart.src.includes('heartempty')) {
-          heart.src = '/img/heartred.png';
+          heart.src = './img/heartred.png';
           localStorage.setItem(localStorageKey, 'red');
         } else {
           heart.src = './img/heartempty.png';
