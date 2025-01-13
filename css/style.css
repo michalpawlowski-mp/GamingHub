@@ -263,6 +263,7 @@ nav > a:hover
 .heart
 {
     width: 25px;
+    height: 25px;
     top: 5px;
     right: 5px;
     position: absolute;
