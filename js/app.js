@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (localStorage.getItem(localStorageKey) === 'red') {
         heart.src = '/img/heartred.png';
       } else {
-        heart.src = '/img/heartempty.png';
+        heart.src = './img/heartempty.png';
       }
 
       heart.addEventListener('click', (event) => {
@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
           heart.src = '/img/heartred.png';
           localStorage.setItem(localStorageKey, 'red');
         } else {
-          heart.src = '/img/heartempty.png';
+          heart.src = './img/heartempty.png';
           localStorage.setItem(localStorageKey, 'empty');
         }
         sortDivs(section);
@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
       hearts.forEach((heart, heartIndex) => {
         const localStorageKey = 'heart' + (sectionIndex * sections.length + heartIndex);
 
-        heart.src = '../img/heartempty.png';
+        heart.src = './img/heartempty.png';
         localStorage.setItem(localStorageKey, 'empty');
       });
     });
@@ -342,7 +342,7 @@ document.addEventListener('DOMContentLoaded', () => {
       hearts.forEach((heart, heartIndex) => {
         const localStorageKey = 'heart' + (sectionIndex * sections.length + heartIndex);
 
-        heart.src = '../img/heartempty.png';
+        heart.src = './img/heartempty.png';
         localStorage.setItem(localStorageKey, 'empty');
       });
     });
