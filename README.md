@@ -1,2 +1,2 @@
 Projekt w ramach pracy Inżynierkiej
-https://ajparmp.github.io/GamingHub/
+https://michalpawlowski-mp.github.io/GamingHub/
