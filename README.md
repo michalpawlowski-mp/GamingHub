@@ -14,16 +14,29 @@ Celem było pokazanie umiejętności budowania responsywnej, funkcjonalnej i est
 
 ## 🚀 Uruchamianie projektu
 ### 1️⃣ Klonowanie repozytorium
-```bash git clone https://github.com/michalpawlowski-mp/GamingHub.git```  
-```bash cd GamingHub```
+
+```bash
+git clone https://github.com/michalpawlowski-mp/GamingHub.git
+```
+```bash
+cd GamingHub
+```
 
 ### 2️⃣ Uruchomienie (brak instalacji zależności)
 Projekt nie wymaga npm/yarn/pnpm – wystarczy otworzyć plik główny.
 
-```bash open index.html```         # macOS  
-```bash start index.html```         # Windows  
-```bash xdg-open index.html```     # Linux  
-
+# macOS 
+```bash
+open index.html
+``` 
+# Windows   
+```bash
+start index.html
+```
+# Linux 
+```bash
+xdg-open index.html
+```
 albo po prostu kliknij dwukrotnie na plik `index.html`
 
 ## 🛠 Technologie
